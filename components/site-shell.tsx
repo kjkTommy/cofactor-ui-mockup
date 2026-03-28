@@ -3,14 +3,10 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { topicNavLinks } from '@/data/topics';
 
 const links = [
-  { href: '/article', label: 'Баланс' },
-  { href: '/category', label: 'Здоровье' },
-  { href: '/about', label: 'Красота' },
-  { href: '/contacts', label: 'Восстановление' },
-  { href: '/contacts', label: 'Истории' },
-  { href: '/contacts', label: 'Чекап' },
+  ...topicNavLinks,
   { href: '/contacts', label: 'Контакты' },
 ];
 
@@ -112,7 +108,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
             <a className="muted mail" href="mailto:hello@cofactor-journal.ru">hello@cofactor-journal.ru</a>
             <p className="muted tg">Telegram: </p>
-            <a className="muted-link" href='https://t.me/ng_health'>@ng_health</a>
+            <a className="muted-link" href='https://t.me/ng_health' target="_blank">@ng_health</a>
+            <Link className="footer__about-link" href="/about">О журнале</Link>
           </div>
         </div>
       </footer>

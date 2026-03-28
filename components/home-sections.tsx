@@ -1,84 +1,79 @@
-import Link from "next/link";
-import CircleHistory from "@/app/archive/page";
-
-const features = [
-    {
-        title: "Тема номера: «Просыпайтесь! Весна!»",
-        text: "Большой визуальный блок с мягким светом, интерьерной фотографией и журнальным ритмом колонок.",
-        image: "/assets/window-spring.jpg",
-    },
-    {
-        title: "Рубрика «Здоровые новости»",
-        text: "Карточный web-ритм повторяет спокойные рамки, плотные текстовые блоки и акцентный хвойный зеленый.",
-        image: "/assets/watch.jpg",
-    },
-    {
-        title: "Развороты с экспертами",
-        text: "Для интервью и колонок использованы крупные портреты, тонкие границы, деликатные подложки и много воздуха.",
-        image: "/assets/portrait-2.jpg",
-    },
-];
-
-const previews = [
-    {href: "/article", title: "Страница статьи", image: "/assets/p12.png"},
-    {href: "/category", title: "Страница рубрики", image: "/assets/p38.png"},
-    {
-        href: "/archive",
-        title: "Архив и содержание",
-        image: "/assets/leaves-left.jpg",
-    },
-    {href: "/about", title: "О журнале", image: "/assets/editor.jpg"},
-];
+import Link from 'next/link';
+import { getHomeFeed } from '@/lib/content';
+import { getTopicLabel } from '@/data/topics';
 
 export function HomeSections() {
-    return (
-        <>
-            <CircleHistory/>
-            <section className="shell section-gap features-grid">
-                {features.map((item) => (
-                    <article key={item.title} className="feature-card card">
-                        <img
-                            src={item.image}
-                            alt={item.title}
-                            className="feature-card__image"
-                        />
-                        <div className="feature-card__body">
-                            <h3>{item.title}</h3>
-                            <p>{item.text}</p>
-                        </div>
-                    </article>
-                ))}
-            </section>
+  const { leadStory, riverStories, gridStories, tags } = getHomeFeed();
 
-            <section className="shell section-gap">
-                <div className="section-title-wrap section-title-wrap--row">
-                    <div>
-                        <p className="eyebrow">Статьи</p>
-                    </div>
-                </div>
-                <div className="preview-grid">
-                    {previews.map((item) => (
-                        <Link
-                            key={item.href}
-                            href={item.href}
-                            className="preview-card card"
-                        >
-                            <img
-                                src={item.image}
-                                alt={item.title}
-                                className="preview-card__image"
-                            />
-                            <div className="preview-card__body">
-                                <h3>{item.title}</h3>
-                                <p>
-                                    Отдельный route с desktop и mobile логикой в одном адаптивном
-                                    макете.
-                                </p>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-            </section>
-        </>
-    );
+  if (!leadStory) {
+    return null;
+  }
+
+  return (
+    <>
+      <section className="shell section-gap editorial-home">
+        <div className="editorial-home__header">
+          <p className="eyebrow">Свежие материалы</p>
+          <p className="editorial-home__note">
+            Лента собрана как редакционный выпуск: один ведущий материал, короткий river историй и
+            спокойная сетка статей ниже.
+          </p>
+        </div>
+
+        <div className="editorial-home__grid">
+          <Link href={leadStory.href} className="editorial-lead card card--paper">
+            <img src={leadStory.image} alt={leadStory.title} className="editorial-lead__image" />
+            <div className="editorial-lead__body">
+              <div className="editorial-kicker">
+                <span>Тема номера</span>
+                <span>{leadStory.subtopic}</span>
+              </div>
+              <h2>{leadStory.title}</h2>
+              <p>{leadStory.excerpt}</p>
+              <span className="editorial-meta">{leadStory.readTime}</span>
+            </div>
+          </Link>
+
+          <div className="editorial-river card">
+            <p className="editorial-river__title">В потоке номера</p>
+            <div className="editorial-river__list">
+              {riverStories.map((story) => (
+                <Link key={story.slug} href={story.href} className="editorial-river__item">
+                  <div className="editorial-kicker">
+                    <span>{getTopicLabel(story.topicSlug)}</span>
+                    <span>{story.subtopic}</span>
+                  </div>
+                  <h3>{story.title}</h3>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="editorial-topics">
+          {tags.map((tag) => (
+            <span key={tag} className="editorial-topics__item">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      <section className="shell section-gap editorial-grid-articles">
+        {gridStories.map((story) => (
+          <Link key={story.slug} href={story.href} className="editorial-story card card--paper">
+            <img src={story.image} alt={story.title} className="editorial-story__image" />
+            <div className="editorial-story__body">
+              <div className="editorial-kicker">
+                <span>{getTopicLabel(story.topicSlug)}</span>
+                <span>{story.subtopic}</span>
+              </div>
+              <h3>{story.title}</h3>
+              <p>{story.excerpt}</p>
+            </div>
+          </Link>
+        ))}
+      </section>
+    </>
+  );
 }

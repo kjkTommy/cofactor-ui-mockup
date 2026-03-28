@@ -5,10 +5,12 @@ export default function ContactsPage() {
         <div className="card card--paper contact-copy">
           <p className="eyebrow">Контакты</p>
           <h1 className="page-title">Связаться с редакцией</h1>
-          <p className="lead">Страница контактов не выбивается из общей эстетики: те же бумажные поверхности, природные оттенки и editorial-структура.</p>
+          <p className="lead">
+            Страница контактов остается отдельной точкой входа для партнеров, авторов и читателей.
+          </p>
           <div className="contact-list">
-            <div><span>Email</span><p>hello@cofactor-journal.ru</p></div>
-            <div><span>Telegram</span><p>@ng_health</p></div>
+            <div><span>Email</span><a href="mailto:hello@cofactor-journal.ru">hello@cofactor-journal.ru</a></div>
+            <div><span>Telegram</span><a href='https://t.me/ng_health' target="_blank">@ng_health</a></div>
             <div><span>Город</span><p>Пермь</p></div>
             <div><span>Формат</span><p>журнал / digital / рекламно-информационный проект</p></div>
           </div>
