@@ -40,9 +40,15 @@ export function CircularOrbit({
   radiusY = 36,
 }: CircularOrbitProps) {
   const orbitClassName = className ? `circular-orbit ${className}` : "circular-orbit";
+  const orbitVars = {
+    "--orbit-center-x": `${centerX}%`,
+    "--orbit-center-y": `${centerY}%`,
+    "--orbit-radius-x": `${radiusX}%`,
+    "--orbit-radius-y": `${radiusY}%`,
+  } as CSSProperties;
 
   return (
-    <div className={orbitClassName}>
+    <div className={orbitClassName} style={orbitVars}>
       <div className="circular-orbit__track" aria-hidden="true" />
       {items.map((item, index) => {
         const angle = getAngle(index, items.length, startAngle, sweepAngle);

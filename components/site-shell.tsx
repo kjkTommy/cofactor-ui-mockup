@@ -1,15 +1,39 @@
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const links = [
-  { href: '/', label: 'Главная' },
-  { href: '/article', label: 'Статья' },
-  { href: '/category', label: 'Рубрика' },
-  { href: '/archive', label: 'Архив' },
-  { href: '/about', label: 'О журнале' },
+  { href: '/article', label: 'Баланс' },
+  { href: '/category', label: 'Здоровье' },
+  { href: '/about', label: 'Красота' },
+  { href: '/contacts', label: 'Восстановление' },
+  { href: '/contacts', label: 'Истории' },
+  { href: '/contacts', label: 'Чекап' },
   { href: '/contacts', label: 'Контакты' },
 ];
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      document.body.style.overflow = '';
+      return;
+    }
+
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
+
   return (
     <div className="site-bg">
       <header className="topbar">
@@ -18,8 +42,19 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <Link href="/" className="brand" aria-label="КоФактор — на главную">
               КоФактор
             </Link>
-            <p className="topbar__note">Editorial mockup</p>
           </div>
+          <button
+            type="button"
+            className={`topbar__burger${isMenuOpen ? ' is-open' : ''}`}
+            aria-label={isMenuOpen ? 'Закрыть меню' : 'Открыть меню'}
+            aria-controls="mobile-nav"
+            aria-expanded={isMenuOpen}
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
           <nav className="nav" aria-label="Основная навигация">
             {links.map((link) => (
               <Link key={link.href} href={link.href} className="nav__link">
@@ -27,9 +62,36 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               </Link>
             ))}
           </nav>
-          <div className="issue-badge">№1 / Весна 2026</div>
         </div>
       </header>
+      <div
+        id="mobile-nav"
+        className={`topbar__mobile${isMenuOpen ? ' is-open' : ''}`}
+        aria-hidden={!isMenuOpen}
+      >
+        <button
+          type="button"
+          className="topbar__mobile-close"
+          aria-label="Закрыть меню"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <span />
+          <span />
+        </button>
+        <nav className="topbar__mobile-nav" aria-label="Мобильная навигация">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="topbar__mobile-link"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+        <a className="issue-badge issue-badge--mobile" href="/">№1 / Весна 2026</a>
+      </div>
       {children}
       <footer className="footer">
         <div className="shell footer__grid">
@@ -46,9 +108,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             </div>
           </div>
           <div>
-            <p className="footer__title">Контакт</p>
-            <p className="muted">hello@cofactor-journal.ru</p>
-            <p className="muted">Telegram: @ng_health</p>
+            <p className="footer__title">Контакты</p>
+
+            <a className="muted mail" href="mailto:hello@cofactor-journal.ru">hello@cofactor-journal.ru</a>
+            <p className="muted tg">Telegram: </p>
+            <a className="muted-link" href='https://t.me/ng_health'>@ng_health</a>
           </div>
         </div>
       </footer>
