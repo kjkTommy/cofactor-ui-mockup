@@ -27,7 +27,6 @@ export function TopicFeed({ topic, initialVisibleCount = 3 }: TopicFeedProps) {
     <section className="topic-page">
       <header className="topic-page__header">
         <h1 className="page-title topic-page__title">{topic.title}</h1>
-        <p className="lead topic-page__lead">{topic.description}</p>
         <div className="topic-page__subtopics">
           <button
             type="button"
