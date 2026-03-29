@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { getHomeFeed } from '@/lib/content';
 import { getTopicLabel } from '@/data/topics';
+import { archiveItems } from '@/data/archive-items';
+import { CircularOrbit } from '@/components/circular-orbit';
 
 export function HomeSections() {
   const { leadStory, riverStories, gridStories, tags } = getHomeFeed();
@@ -57,6 +59,11 @@ export function HomeSections() {
             </span>
           ))}
         </div>
+      </section>
+
+      <section className="shell section-gap editorial-orbit">
+        <p className="eyebrow">Навигация по номеру</p>
+        <CircularOrbit items={archiveItems} className="archive-layout" />
       </section>
 
       <section className="shell section-gap editorial-grid-articles">

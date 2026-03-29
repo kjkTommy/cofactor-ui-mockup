@@ -591,6 +591,11 @@ select {
   gap: 26px;
 }
 
+.editorial-orbit {
+  display: grid;
+  gap: 18px;
+}
+
 .editorial-story {
   overflow: hidden;
 }
@@ -1382,6 +1387,14 @@ select {
 
 .about-lead p + p {
   margin-top: 16px;
+}
+
+.about-lead p.about-info {
+  font-size: 14px;
+  line-height: 22px;
+  max-width: 380px;
+  text-align: end;
+  margin-left: auto;
 }
 
 .about-side {
