@@ -17,6 +17,21 @@ function renderBlock(block: ArticleContentBlock, key: string, fallbackTitle: str
     return <p key={key}>{block.text}</p>;
   }
 
+  if (block.type === 'list') {
+    const ListTag = block.style === 'ordered' ? 'ol' : 'ul';
+
+    return (
+      <div key={key} className="article-list-block">
+        {block.title ? <p className="article-list-block__title">{block.title}</p> : null}
+        <ListTag className="article-list-block__list">
+          {block.items.map((item) => (
+            <li key={`${key}-${item}`}>{item}</li>
+          ))}
+        </ListTag>
+      </div>
+    );
+  }
+
   if (block.type === 'image') {
     return (
       <figure key={key} className={`article-media article-media--${block.variant ?? 'default'}`}>

@@ -21,8 +21,16 @@ export type ArticleParagraphBlock = {
   text: string;
 };
 
+export type ArticleListBlock = {
+  type: 'list';
+  style?: 'bullet' | 'ordered';
+  title?: string;
+  items: string[];
+};
+
 export type ArticleContentBlock =
   | ArticleParagraphBlock
+  | ArticleListBlock
   | ArticleImageBlock
   | ArticleGalleryBlock;
 
@@ -30,6 +38,7 @@ export type ArticleSeed = {
   slug: string;
   title: string;
   topicSlug: string;
+  additionalTopicSlugs?: string[];
   subtopic: string;
   image: string;
   excerpt: string;

@@ -10,6 +10,14 @@ const links = [
   { href: '/contacts', label: 'Контакты' },
 ];
 
+function isActiveLink(pathname: string, href: string) {
+  if (href === '/') {
+    return pathname === '/';
+  }
+
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -53,7 +61,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           </button>
           <nav className="nav" aria-label="Основная навигация">
             {links.map((link) => (
-              <Link key={link.href} href={link.href} className="nav__link">
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`nav__link${isActiveLink(pathname, link.href) ? ' is-active' : ''}`}
+                aria-current={isActiveLink(pathname, link.href) ? 'page' : undefined}
+              >
                 {link.label}
               </Link>
             ))}
@@ -79,7 +92,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <Link
               key={link.href}
               href={link.href}
-              className="topbar__mobile-link"
+              className={`topbar__mobile-link${isActiveLink(pathname, link.href) ? ' is-active' : ''}`}
+              aria-current={isActiveLink(pathname, link.href) ? 'page' : undefined}
               onClick={() => setIsMenuOpen(false)}
             >
               {link.label}
