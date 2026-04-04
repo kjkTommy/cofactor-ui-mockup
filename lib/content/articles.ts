@@ -2,6 +2,7 @@ import type { Article } from '@/lib/content/types';
 import { article as balanceSoftRhythm } from '@/content/articles/balance-soft-rhythm';
 import { article as balanceFocusFatigue } from '@/content/articles/balance-focus-fatigue';
 import { article as balanceDayEnergy } from '@/content/articles/balance-day-energy';
+import { article as menopauseHiddenRisks } from '@/content/articles/menopause-hidden-risks';
 import { article as healthWildHerbs } from '@/content/articles/health-wild-herbs';
 import { article as healthMagnesiumGuide } from '@/content/articles/health-magnesium-guide';
 import { article as healthWalkingBody } from '@/content/articles/health-walking-body';
@@ -19,6 +20,7 @@ export const articles: Article[] = [
   balanceSoftRhythm,
   balanceFocusFatigue,
   balanceDayEnergy,
+  menopauseHiddenRisks,
   healthWildHerbs,
   healthMagnesiumGuide,
   healthWalkingBody,

@@ -9,7 +9,7 @@ type TopicFeedProps = {
   initialVisibleCount?: number;
 };
 
-export function TopicFeed({ topic, initialVisibleCount = 3 }: TopicFeedProps) {
+export function TopicFeed({ topic, initialVisibleCount = 8 }: TopicFeedProps) {
   const [activeSubtopic, setActiveSubtopic] = useState<string | null>(null);
   const [visibleCount, setVisibleCount] = useState(initialVisibleCount);
   const filteredItems = activeSubtopic
