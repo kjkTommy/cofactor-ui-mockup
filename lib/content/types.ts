@@ -1,3 +1,31 @@
+export type ArticleImageBlock = {
+  type: 'image';
+  src: string;
+  alt: string;
+  caption?: string;
+  variant?: 'default' | 'aside';
+};
+
+export type ArticleGalleryBlock = {
+  type: 'gallery';
+  caption?: string;
+  images: Array<{
+    src: string;
+    alt: string;
+    label?: string;
+  }>;
+};
+
+export type ArticleParagraphBlock = {
+  type: 'paragraph';
+  text: string;
+};
+
+export type ArticleContentBlock =
+  | ArticleParagraphBlock
+  | ArticleImageBlock
+  | ArticleGalleryBlock;
+
 export type ArticleSeed = {
   slug: string;
   title: string;
@@ -12,7 +40,8 @@ export type ArticleSeed = {
   quote: string;
   sections: Array<{
     heading: string;
-    paragraphs: string[];
+    paragraphs?: string[];
+    content?: ArticleContentBlock[];
   }>;
   gallery?: string[];
   relatedSlugs?: string[];

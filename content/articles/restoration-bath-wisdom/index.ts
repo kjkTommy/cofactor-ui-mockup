@@ -3,7 +3,7 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'restoration-bath-wisdom',
   title: 'Банные премудрости для мягкого восстановления',
-  topicSlug: 'restoration',
+  topicSlug: 'non-medical-care',
   subtopic: 'Баня',
   image: '/assets/p51.png',
   excerpt: 'Редакционная статья с теплой фактурой, крупным кадром и коротким сопровождающим текстом.',

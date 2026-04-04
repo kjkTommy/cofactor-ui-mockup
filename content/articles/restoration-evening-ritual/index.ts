@@ -3,7 +3,7 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'restoration-evening-ritual',
   title: 'Как наладить вечерний ритуал, который помогает телу замедляться',
-  topicSlug: 'restoration',
+  topicSlug: 'non-medical-care',
   subtopic: 'Сон',
   image: '/assets/window-winter.jpg',
   excerpt: 'Небольшой материал о повторяемости, ритме и снижении перегрузки перед сном.',

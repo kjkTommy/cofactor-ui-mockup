@@ -3,7 +3,7 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'restoration-offline-rest',
   title: 'Почему отдых без телефона ощущается совсем иначе',
-  topicSlug: 'restoration',
+  topicSlug: 'non-medical-care',
   subtopic: 'Отдых',
   image: '/assets/leaves-right.jpg',
   excerpt: 'Разбор о внимании, тишине и восстановлении нервной системы через среду, а не через еще одну задачу.',

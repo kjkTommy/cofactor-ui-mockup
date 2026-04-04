@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getArticleBySlug, getRelatedArticles, articles } from '@/lib/content';
 import { topicDefinitions } from '@/data/topics';
+import type { ArticleContentBlock } from '@/lib/content/types';
 
 type ArticlePageProps = {
   params: Promise<{ slug: string }>;
@@ -9,6 +10,35 @@ type ArticlePageProps = {
 
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
+}
+
+function renderBlock(block: ArticleContentBlock, key: string, fallbackTitle: string) {
+  if (block.type === 'paragraph') {
+    return <p key={key}>{block.text}</p>;
+  }
+
+  if (block.type === 'image') {
+    return (
+      <figure key={key} className={`article-media article-media--${block.variant ?? 'default'}`}>
+        <img src={block.src} alt={block.alt} className="article-media__image" />
+        {block.caption ? <figcaption className="article-media__caption">{block.caption}</figcaption> : null}
+      </figure>
+    );
+  }
+
+  return (
+    <figure key={key} className="article-media article-gallery-block">
+      <div className="article-gallery-block__grid">
+        {block.images.map((image) => (
+          <div key={`${key}-${image.src}`} className="article-gallery-block__item">
+            <img src={image.src} alt={image.alt || fallbackTitle} className="article-media__image" />
+            {image.label ? <span className="article-gallery-block__label">{image.label}</span> : null}
+          </div>
+        ))}
+      </div>
+      {block.caption ? <figcaption className="article-media__caption">{block.caption}</figcaption> : null}
+    </figure>
+  );
 }
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
@@ -81,11 +111,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           <div className="quote-block article-pullquote">{article.quote}</div>
 
           {article.sections.map((section) => (
-            <div key={section.heading}>
+            <div key={section.heading} className="article-section">
               <h2>{section.heading}</h2>
-              {section.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
+              {section.content
+                ? section.content.map((block, index) =>
+                    renderBlock(block, `${section.heading}-${index}`, article.title),
+                  )
+                : section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
             </div>
           ))}
 

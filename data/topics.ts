@@ -33,9 +33,9 @@ export const topicDefinitions: TopicDefinition[] = [
     subtopics: ['Общее здоровье', 'Сон', 'Спорт', 'Экспертные колонки'],
   },
   {
-    slug: 'restoration',
-    label: 'Восстановление',
-    title: 'Восстановление',
+    slug: 'non-medical-care',
+    label: 'Не медицинская помощь',
+    title: 'Не медицинская помощь',
     subtopics: ['Сон', 'Баня', 'Отдых', 'Восстановительные практики'],
   },
   {
