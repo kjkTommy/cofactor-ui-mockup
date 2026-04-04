@@ -3,12 +3,11 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'new-article-slug',
   title: 'Новый материал',
-  topicSlug: 'balance',
+  topicSlug: 'about-woman-and-man',
   subtopic: 'Привычки',
   image: '/assets/window-spring.jpg',
   excerpt: 'Короткое описание для карточек и списков раздела.',
   publishedAt: '01 апреля 2026',
-  readTime: '8 минут чтения',
   outline: ['Первый блок', 'Второй блок', 'Третий блок'],
   intro: [
     'Первый вводный абзац статьи.',

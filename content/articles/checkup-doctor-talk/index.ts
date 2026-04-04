@@ -3,12 +3,11 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'checkup-doctor-talk',
   title: 'Как разговаривать с врачом, чтобы чекап был полезным',
-  topicSlug: 'checkup',
+  topicSlug: 'buzzers',
   subtopic: 'Советы',
   image: '/assets/p46.png',
   excerpt: 'Практика для тех, кто хочет приходить на прием не с тревогой, а с ясными вопросами.',
   publishedAt: '10 марта 2026',
-  readTime: '7 минут чтения',
   outline: ['Подготовка к приему', 'Какие вопросы задавать', 'Как не потерять важное'],
   intro: [
     'Разговор с врачом становится продуктивнее, если приходить на него не только с анализами, но и с ясной картиной собственных ощущений.',

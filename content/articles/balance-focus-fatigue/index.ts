@@ -3,12 +3,11 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'balance-focus-fatigue',
   title: 'Что делать, если даже полезные практики начинают утомлять',
-  topicSlug: 'balance',
+  topicSlug: 'about-woman-and-man',
   subtopic: 'Фокус',
   image: '/assets/p12.png',
   excerpt: 'Текст о том, как вернуть мягкость в режим и не превращать заботу о себе в контрольный список.',
   publishedAt: '26 марта 2026',
-  readTime: '8 минут чтения',
   outline: ['Откуда берется усталость от self-care', 'Как снять давление', 'Практика снижения нагрузки'],
   intro: [
     'Иногда утомляет не сама забота о себе, а то, как она организована. Когда каждая полезная вещь превращается в задачу, ресурс начинает уходить.',

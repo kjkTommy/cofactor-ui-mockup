@@ -3,12 +3,11 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'stories-age-of-happiness',
   title: 'Возраст счастья: разговор о том, как меняется ощущение жизни',
-  topicSlug: 'stories',
+  topicSlug: 'supplements',
   subtopic: 'Интервью',
   image: '/assets/portrait-1.jpg',
   excerpt: 'История с человеческой оптикой и более камерной подачей, чем у обычной экспертной статьи.',
   publishedAt: '15 марта 2026',
-  readTime: '12 минут чтения',
   outline: ['Что меняется с возрастом', 'Как выглядит зрелое спокойствие', 'Почему это важно читать'],
   intro: [
     'Некоторые тексты важны не только знаниями, но и тоном, в котором они написаны. Интервью о возрасте и счастье работает именно так.',

@@ -3,12 +3,11 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'stories-travel-return',
   title: 'Путешествие как способ вернуться к себе и сбросить лишний шум',
-  topicSlug: 'stories',
+  topicSlug: 'supplements',
   subtopic: 'Опыт',
   image: '/assets/group.jpg',
   excerpt: 'Материал о смене среды, внимании к телу и проживании маршрута без гонки за впечатлениями.',
   publishedAt: '13 марта 2026',
-  readTime: '8 минут чтения',
   outline: ['Почему смена среды помогает', 'Как путешествовать бережно', 'Что остается после возвращения'],
   intro: [
     'Путешествие не обязано быть насыщенным, чтобы быть важным. Иногда именно замедленный маршрут помогает заметить себя лучше всего.',

@@ -640,7 +640,7 @@ select {
 }
 
 .topic-page__title {
-  max-width: 12ch;
+  /*max-width: 12ch;*/
 }
 
 .topic-page__lead {
@@ -971,7 +971,7 @@ select {
 .team-card h3,
 .about-side h2,
 .article-body h2 {
-  margin: 0 0 12px;
+  margin: 30px 0 12px;
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 2vw, 2rem);
   font-weight: 500;

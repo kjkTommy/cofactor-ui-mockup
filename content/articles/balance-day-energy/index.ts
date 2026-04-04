@@ -3,12 +3,11 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'balance-day-energy',
   title: 'Три небольших изменения в дне, которые реально поддерживают энергию',
-  topicSlug: 'balance',
+  topicSlug: 'about-woman-and-man',
   subtopic: 'Ритм дня',
   image: '/assets/p13.png',
   excerpt: 'Короткий практический материал в логике современного digital-журнала.',
   publishedAt: '24 марта 2026',
-  readTime: '7 минут чтения',
   outline: ['Свет', 'Паузы', 'Мягкое движение'],
   intro: [
     'Энергия чаще восстанавливается через простые и повторяемые действия, а не через редкие попытки резко “собраться”.',

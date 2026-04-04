@@ -6,7 +6,6 @@ export type ArticleSeed = {
   image: string;
   excerpt: string;
   publishedAt: string;
-  readTime: string;
   author?: string;
   outline: string[];
   intro: string[];

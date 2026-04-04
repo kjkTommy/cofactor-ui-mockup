@@ -16,10 +16,6 @@ export function HomeSections() {
       <section className="shell section-gap editorial-home">
         <div className="editorial-home__header">
           <p className="eyebrow">Свежие материалы</p>
-          <p className="editorial-home__note">
-            Лента собрана как редакционный выпуск: один ведущий материал, короткий river историй и
-            спокойная сетка статей ниже.
-          </p>
         </div>
 
         <div className="editorial-home__grid">
@@ -32,7 +28,6 @@ export function HomeSections() {
               </div>
               <h2>{leadStory.title}</h2>
               <p>{leadStory.excerpt}</p>
-              <span className="editorial-meta">{leadStory.readTime}</span>
             </div>
           </Link>
 

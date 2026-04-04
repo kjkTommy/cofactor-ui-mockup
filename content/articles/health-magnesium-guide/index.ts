@@ -3,12 +3,11 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'health-magnesium-guide',
   title: 'Как правильно выбрать магний и не запутаться в формах',
-  topicSlug: 'health',
+  topicSlug: 'healthy-food',
   subtopic: 'Экспертные колонки',
   image: '/assets/p46.png',
   excerpt: 'Плотный разбор с акцентом на понятность, экспертность и визуально спокойную подачу.',
   publishedAt: '20 марта 2026',
-  readTime: '11 минут чтения',
   outline: ['Почему форм так много', 'На что смотреть', 'Когда не нужен самоназначенный прием'],
   intro: [
     'Вокруг магния слишком много маркетинга и слишком мало спокойного объяснения. Поэтому читатель быстро теряется в названиях и обещаниях.',

@@ -1,8 +1,10 @@
 import Link from 'next/link';
 import { getCategoryFeed } from '@/lib/content';
+import { getTopicLabel } from '@/data/topics';
 
 export default function CategoryPage() {
   const { leadStory, stories } = getCategoryFeed();
+  const topicLabel = getTopicLabel('healthy-food');
 
   if (!leadStory) {
     return null;
@@ -14,9 +16,9 @@ export default function CategoryPage() {
         <div className="category-editorial__intro">
           <div className="editorial-kicker">
             <span>Рубрика</span>
-            <span>Здоровье</span>
+            <span>{topicLabel}</span>
           </div>
-          <h1 className="page-title">Здоровые новости и полезные практики</h1>
+          <h1 className="page-title">{topicLabel}</h1>
           <p className="lead">
             Подборка собрана в формате журнальной рубрики: ведущий материал, затем ряд статей с
             крупными обложками и короткими вводными подписями.
@@ -42,7 +44,7 @@ export default function CategoryPage() {
             <img src={story.image} alt={story.title} className="editorial-story__image" />
             <div className="editorial-story__body">
               <div className="editorial-kicker">
-                <span>Здоровье</span>
+                <span>{topicLabel}</span>
                 <span>{story.subtopic}</span>
               </div>
               <h3>{story.title}</h3>

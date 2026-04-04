@@ -24,7 +24,7 @@ export function getHomeFeed() {
 }
 
 export function getCategoryFeed() {
-  const healthArticles = getArticlesByTopic('health');
+  const healthArticles = getArticlesByTopic('healthy-food');
 
   return {
     leadStory: getArticleBySlug('health-walking-body'),

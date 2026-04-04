@@ -3,12 +3,11 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'health-walking-body',
   title: 'Что меняется в ощущении тела, когда вы возвращаете прогулки в режим',
-  topicSlug: 'health',
+  topicSlug: 'healthy-food',
   subtopic: 'Спорт',
   image: '/assets/watch.jpg',
   excerpt: 'Практический текст про умеренное движение и наблюдение за состоянием, а не за цифрами.',
   publishedAt: '19 марта 2026',
-  readTime: '7 минут чтения',
   outline: ['Почему ходьба недооценена', 'Как встроить ее в режим', 'Что меняется по ощущениям'],
   intro: [
     'Возвращение прогулок в день часто выглядит слишком простым решением, чтобы восприниматься всерьез. Но именно простота делает его устойчивым.',

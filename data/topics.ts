@@ -21,15 +21,15 @@ export type Topic = TopicDefinition & {
 
 export const topicDefinitions: TopicDefinition[] = [
   {
-    slug: 'balance',
-    label: 'Баланс',
-    title: 'Баланс',
+    slug: 'about-woman-and-man',
+    label: 'О женском и мужском',
+    title: 'О женском и мужском',
     subtopics: ['Привычки', 'Режим', 'Фокус', 'Ритм дня'],
   },
   {
-    slug: 'health',
-    label: 'Здоровье',
-    title: 'Здоровье',
+    slug: 'healthy-food',
+    label: 'Еда с пользой',
+    title: 'Еда с пользой',
     subtopics: ['Общее здоровье', 'Сон', 'Спорт', 'Экспертные колонки'],
   },
   {
@@ -39,15 +39,21 @@ export const topicDefinitions: TopicDefinition[] = [
     subtopics: ['Сон', 'Баня', 'Отдых', 'Восстановительные практики'],
   },
   {
-    slug: 'stories',
-    label: 'Истории',
-    title: 'Истории',
+    slug: 'supplements',
+    label: 'Бады +',
+    title: 'Бады +',
     subtopics: ['Интервью', 'Опыт', 'Редакция', 'Личные тексты'],
   },
   {
-    slug: 'checkup',
-    label: 'Чекап',
-    title: 'Чекап',
+    slug: 'buzzers',
+    label: 'Зумеры',
+    title: 'Зумеры',
+    subtopics: ['Анализы', 'Маркеры', 'Профилактика', 'Советы'],
+  },
+  {
+    slug: 'peoples',
+    label: 'Люди',
+    title: 'Люди',
     subtopics: ['Анализы', 'Маркеры', 'Профилактика', 'Советы'],
   },
 ];

@@ -3,12 +3,11 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'health-wild-herbs',
   title: 'Весенние дикоросы на страже здоровья',
-  topicSlug: 'health',
+  topicSlug: 'healthy-food',
   subtopic: 'Общее здоровье',
   image: '/assets/p38.png',
   excerpt: 'Материал с выраженной обложкой и коротким поясняющим лидом внизу карточки.',
   publishedAt: '22 марта 2026',
-  readTime: '9 минут чтения',
   outline: ['Почему сезонность важна', 'Как вводить новые продукты', 'Что дает умеренность'],
   intro: [
     'Весенние продукты часто воспринимаются как символ обновления, но ценность здесь не в моде, а в сезонной логике питания.',

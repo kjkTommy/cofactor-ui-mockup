@@ -3,12 +3,11 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'checkup-track-markers',
   title: 'Какие показатели полезно отслеживать в динамике',
-  topicSlug: 'checkup',
+  topicSlug: 'buzzers',
   subtopic: 'Маркеры',
   image: '/assets/p38.png',
   excerpt: 'Поясняющий текст о том, что именно дает контекст и повторяемость наблюдений.',
   publishedAt: '11 марта 2026',
-  readTime: '8 минут чтения',
   outline: ['Почему важна динамика', 'Как хранить результаты', 'Что обсуждать с врачом'],
   intro: [
     'Один результат редко говорит столько же, сколько серия наблюдений во времени. Именно динамика помогает увидеть изменения яснее.',

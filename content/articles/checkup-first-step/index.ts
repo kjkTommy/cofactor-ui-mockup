@@ -3,12 +3,11 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'checkup-first-step',
   title: 'С чего начать базовый чекап, если давно ничего не проверяли',
-  topicSlug: 'checkup',
+  topicSlug: 'buzzers',
   subtopic: 'Профилактика',
   image: '/assets/p18.png',
   excerpt: 'Стартовый материал для читателя, который хочет получить маршрут, а не перегрузиться назначениями.',
   publishedAt: '12 марта 2026',
-  readTime: '10 минут чтения',
   outline: ['Почему тревога мешает', 'Как собрать базовый маршрут', 'Что делать с результатами'],
   intro: [
     'Чекап часто откладывают не из-за лени, а из-за перегруза: слишком много возможных обследований и слишком мало ясности.',

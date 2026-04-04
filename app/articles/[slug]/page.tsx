@@ -34,7 +34,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         <div className="article-header__meta">
           <span>{article.author}</span>
           <span>{article.publishedAt}</span>
-          <span>{article.readTime}</span>
         </div>
       </section>
 

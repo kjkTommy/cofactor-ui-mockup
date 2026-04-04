@@ -3,12 +3,11 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'stories-first-issue',
   title: 'Как создавался первый выпуск КоФактора',
-  topicSlug: 'stories',
+  topicSlug: 'supplements',
   subtopic: 'Редакция',
   image: '/assets/editor.jpg',
   excerpt: 'Внутренний взгляд на процесс: от идеи до digital-публикации и редакционного темпа работы.',
   publishedAt: '14 марта 2026',
-  readTime: '9 минут чтения',
   outline: ['Как появилась идея', 'Как собиралась структура', 'Почему важен темп'],
   intro: [
     'У любого редакционного проекта есть невидимая читателю кухня. В ней много решений о ритме, голосе и структуре материалов.',
