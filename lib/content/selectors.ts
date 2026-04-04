@@ -9,10 +9,14 @@ export function getHomeFeed() {
   return {
     leadStory: getArticleBySlug('balance-soft-rhythm'),
     riverStories: [
-      getArticleBySlug('checkup-track-markers'),
+      getArticleBySlug('menopause-hidden-risks'),
       getArticleBySlug('health-magnesium-guide'),
       getArticleBySlug('balance-focus-fatigue'),
-      getArticleBySlug('stories-first-issue'),
+      getArticleBySlug('health-walking-body'),
+      getArticleBySlug('restoration-bath-wisdom'),
+      getArticleBySlug('industrial-city-health-culture'),
+      getArticleBySlug('sport-point-of-support'),
+      getArticleBySlug('perm-medical-library'),
     ].filter(isArticle),
     gridStories: [
       getArticleBySlug('health-wild-herbs'),

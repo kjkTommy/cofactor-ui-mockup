@@ -24,9 +24,13 @@ import { article as lonelinessStrengthSupport } from '@/content/articles/lonelin
 import { article as financialHealthLuxury } from '@/content/articles/financial-health-luxury';
 import { article as lifeWithoutSupportHousing } from '@/content/articles/life-without-support-housing';
 import { article as neuroCareerGuidance } from '@/content/articles/neuro-career-guidance';
-import { article as checkupFirstStep } from '@/content/articles/checkup-first-step';
-import { article as checkupTrackMarkers } from '@/content/articles/checkup-track-markers';
-import { article as checkupDoctorTalk } from '@/content/articles/checkup-doctor-talk';
+import { article as teenHealthStartBase } from '@/content/articles/teen-health-start-base';
+import { article as examFocusFood } from '@/content/articles/exam-focus-food';
+import { article as industrialCityHealthCulture } from '@/content/articles/industrial-city-health-culture';
+import { article as sportPointOfSupport } from '@/content/articles/sport-point-of-support';
+import { article as permMedicalLibrary } from '@/content/articles/perm-medical-library';
+import { article as eastForTheStrong } from '@/content/articles/east-for-the-strong';
+import { article as pagesThatChange } from '@/content/articles/pages-that-change';
 
 export const articles: Article[] = [
   balanceSoftRhythm,
@@ -54,9 +58,13 @@ export const articles: Article[] = [
   financialHealthLuxury,
   lifeWithoutSupportHousing,
   neuroCareerGuidance,
-  checkupFirstStep,
-  checkupTrackMarkers,
-  checkupDoctorTalk,
+  teenHealthStartBase,
+  examFocusFood,
+  industrialCityHealthCulture,
+  sportPointOfSupport,
+  permMedicalLibrary,
+  eastForTheStrong,
+  pagesThatChange,
 ];
 
 export function getArticleBySlug(slug: string) {
