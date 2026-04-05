@@ -1546,36 +1546,58 @@ select {
   font: 700 0.74rem/1.4 var(--font-sans);
 }
 
-.field div {
+.field input,
+.field textarea {
   position: relative;
+  width: 100%;
   height: 52px;
+  padding: 0 16px;
   border: 1px solid rgba(60, 76, 59, 0.12);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.82);
-  overflow: hidden;
+  color: var(--ink);
+  font: 500 1rem/1.3 var(--font-sans);
+  outline: none;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
 }
 
-.field div::after {
-  content: "";
-  position: absolute;
-  left: 16px;
-  right: 16px;
-  top: 50%;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    rgba(102, 120, 58, 0.22),
-    rgba(102, 120, 58, 0.04)
-  );
+.field textarea {
+  min-height: 180px;
+  padding: 16px;
+  resize: vertical;
 }
 
-.field--lg div {
+.field input::placeholder,
+.field textarea::placeholder {
+  color: rgba(60, 76, 59, 0.45);
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: rgba(31, 93, 73, 0.4);
+  box-shadow: 0 0 0 4px rgba(31, 93, 73, 0.08);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.field--lg textarea {
   height: 180px;
 }
 
-.field--lg div::after {
-  top: 28px;
-  right: 42%;
+.form-status {
+  margin: -2px 0 0;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.form-status--success {
+  color: #1f6b55;
+}
+
+.form-status--error {
+  color: #b2432f;
 }
 
 .contact-list {
@@ -2037,11 +2059,12 @@ select {
     padding: 22px;
   }
 
-  .field div {
+  .field input,
+  .field textarea {
     height: 48px;
   }
 
-  .field--lg div {
+  .field--lg textarea {
     height: 160px;
   }
 }
