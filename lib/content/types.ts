@@ -1,9 +1,12 @@
+import type { CSSProperties } from 'react';
+
 export type ArticleImageBlock = {
   type: 'image';
   src: string;
   alt: string;
   caption?: string;
   variant?: 'default' | 'aside';
+  style?: CSSProperties;
 };
 
 export type ArticleGalleryBlock = {
@@ -13,12 +16,14 @@ export type ArticleGalleryBlock = {
     src: string;
     alt: string;
     label?: string;
+    style?: CSSProperties;
   }>;
 };
 
 export type ArticleParagraphBlock = {
   type: 'paragraph';
   text: string;
+  style?: CSSProperties;
 };
 
 export type ArticleListBlock = {
@@ -54,6 +59,10 @@ export type ArticleSeed = {
   }>;
   gallery?: string[];
   relatedSlugs?: string[];
+  helpfulLinks?: Array<{
+    label: string;
+    href: string;
+  }>;
 };
 
 export type Article = ArticleSeed & {

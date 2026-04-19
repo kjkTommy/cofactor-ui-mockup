@@ -6,7 +6,7 @@ export const article = createArticle({
   topicSlug: 'supplements',
   additionalTopicSlugs: ['about-woman-and-man'],
   subtopic: 'Экспертные колонки',
-  image: '/assets/portrait-1.jpg',
+  image: '/assets/23-cover.png',
   excerpt:
     'Материал о рисках НАЖБП у женщин в период менопаузы, профилактике, диагностике и роли фульвовой кислоты и фолатов.',
   publishedAt: '21 марта 2026',
@@ -26,13 +26,18 @@ export const article = createArticle({
   sections: [
     {
       heading: 'Почему НАЖБП становится важной темой в период менопаузы',
+
       content: [
         {
+          type: 'paragraph',
+          text: 'АЛЕКСАНДР СОБОЛЬ. КАНДИДАТ МЕДИЦИНСКИХ НАУК, ВРАЧ-ГАСТРОЭНТЕРОЛОГ.',
+          style: {background: "#cfdf99", color: '#637022', fontWeight: 500, padding: 20},
+        },
+        {
           type: 'image',
-          src: '/assets/portrait-1.jpg',
+          src: '/assets/21.png',
           alt: 'Портрет врача',
           variant: 'aside',
-          caption: 'ФОТО 1 — портрет врача, верхняя правая часть страницы.',
         },
         {
           type: 'paragraph',
@@ -66,10 +71,6 @@ export const article = createArticle({
             'Своевременно обращаться к врачу при появлении симптомов усталости, слабости, боли в правом боку или при постоянном наборе веса.',
           ],
         },
-        {
-          type: 'paragraph',
-          text: 'ПЛАШКА 1 — зелёный блок под фото справа: «АЛЕКСАНДР СОБОЛЬ. КАНДИДАТ МЕДИЦИНСКИХ НАУК, ВРАЧ-ГАСТРОЭНТЕРОЛОГ».',
-        },
       ],
     },
     {
@@ -90,17 +91,9 @@ export const article = createArticle({
           text: 'При сочетании этих факторов вероятность наличия НАЖБП резко возрастает.',
         },
         {
-          type: 'gallery',
-          caption: 'СХЕМА 1 — стадии рака печени.',
-          images: [
-            { src: '/assets/p12.png', alt: 'Стадии рака печени', label: 'Схема 1' },
-          ],
-        },
-        {
           type: 'image',
-          src: '/assets/group.jpg',
+          src: '/assets/22.png',
           alt: 'Врач разговаривает по телефону',
-          caption: 'ФОТО 2 — врач разговаривает по телефону, нижняя часть страницы.',
         },
       ],
     },
@@ -121,11 +114,8 @@ export const article = createArticle({
         },
         {
           type: 'gallery',
-          caption: 'ФОТО 3, ФОТО 4 и QR 1 — блок ОРГАНИК ЛОГОС.',
           images: [
-            { src: '/assets/leaves-left.jpg', alt: 'Колосья или зерно', label: 'Фото 3' },
-            { src: '/assets/p46.png', alt: 'Бутылочка FulvAt на фоне зерна', label: 'Фото 4' },
-            { src: '/assets/p51.png', alt: 'QR-код', label: 'QR 1' },
+            { src: '/assets/22-photo.png', alt: 'Колосья или зерно', },
           ],
         },
         {
@@ -133,8 +123,14 @@ export const article = createArticle({
           text: 'ОРГАНИК ЛОГОС — здоровье начинается с качества. Компания занимается разработками в сфере биохимии, запатентовала технологию получения фульвовой кислоты путём экстракции из растительного сырья и с 2025 года является резидентом Сколково.',
         },
         {
+          type: 'image',
+          src: '/assets/23.png',
+          alt: 'Фульвовая кислота',
+          variant: 'aside',
+        },
+        {
           type: 'list',
-          title: 'ПЛАШКА 2 — Почему фульвовая кислота?',
+          title: 'Почему фульвовая кислота?',
           items: [
             'транспорт полезных веществ в клетки организма',
             'детоксикация',
@@ -146,10 +142,16 @@ export const article = createArticle({
         },
         {
           type: 'paragraph',
-          text: 'БАД, НЕ ЯВЛЯЕТСЯ ЛЕКАРСТВЕННЫМ СРЕДСТВОМ. Справа внизу вертикально стоит слово «РЕКЛАМА».',
+          text: 'БАД, НЕ ЯВЛЯЕТСЯ ЛЕКАРСТВЕННЫМ СРЕДСТВОМ.',
         },
       ],
     },
   ],
   relatedSlugs: ['mare-milk-family-health', 'alexinia-longevity-dialogue'],
+  helpfulLinks: [
+    {
+      label: 'Органик Логос',
+      href: 'https://organiclogos.ru/',
+    },
+  ],
 });

@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'У женщин перименопауза начинается в разном возрасте',
   topicSlug: 'about-woman-and-man',
   subtopic: 'Ритм дня',
-  image: '/assets/window-winter.jpg',
+  image: '/assets/18.png',
   excerpt:
     'Но первые признаки переходного этапа можно заметить уже в возрасте 40 лет.',
   publishedAt: '24 марта 2026',
@@ -28,10 +28,9 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/window-winter.jpg',
+          src: '/assets/18.png',
           alt: 'Черно-белый портрет женщины в профиль',
           variant: 'aside',
-          caption: 'ФОТО 1 — черно-белый портрет женщины в профиль, левая верхняя часть страницы.',
         },
         {
           type: 'paragraph',
@@ -142,20 +141,12 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/p18.png',
+          src: '/assets/19.png',
           alt: 'Женщина сидит на стуле',
-          caption: 'ФОТО 2 — женщина сидит на стуле, нижняя левая часть страницы.',
         },
         {
           type: 'paragraph',
-          text: 'Переходите на мой сайт, где можно заполнить опросник совершенно БЕСПЛАТНО.',
-        },
-        {
-          type: 'image',
-          src: '/assets/p51.png',
-          alt: 'QR-код',
-          variant: 'aside',
-          caption: 'QR-КОД — нижняя правая часть страницы.',
+          text: 'Переходите на мой [сайт](https://taplink.cc/elena_zimasova), где можно заполнить опросник совершенно БЕСПЛАТНО.',
         },
       ],
     },

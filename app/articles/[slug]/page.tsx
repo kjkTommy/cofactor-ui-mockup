@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import type { ReactNode } from 'react';
 import { getArticleBySlug, getRelatedArticles, articles } from '@/lib/content';
 import { topicDefinitions } from '@/data/topics';
 import type { ArticleContentBlock } from '@/lib/content/types';
@@ -12,9 +13,74 @@ export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
 }
 
+const URL_PATTERN = /(https?:\/\/[^\s]+)/g;
+const MARKDOWN_LINK_PATTERN = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+
+function renderAutoLinkedText(text: string, keyPrefix: string) {
+  const parts = text.split(URL_PATTERN);
+
+  return parts.map((part, index) => {
+    if (!part.startsWith('http://') && !part.startsWith('https://')) {
+      return part;
+    }
+
+    const href = part.replace(/[),.;!?]+$/g, '');
+    const suffix = part.slice(href.length);
+
+    return (
+      <span key={`${keyPrefix}-url-${index}`}>
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          {href}
+        </a>
+        {suffix}
+      </span>
+    );
+  });
+}
+
+function renderTextWithLinks(text: string, keyPrefix: string) {
+  const nodes: ReactNode[] = [];
+  let lastIndex = 0;
+  let linkIndex = 0;
+
+  for (const match of text.matchAll(MARKDOWN_LINK_PATTERN)) {
+    const matchIndex = match.index ?? 0;
+    const before = text.slice(lastIndex, matchIndex);
+
+    if (before) {
+      nodes.push(...renderAutoLinkedText(before, `${keyPrefix}-before-${linkIndex}`));
+    }
+
+    const label = match[1];
+    const href = match[2];
+
+    nodes.push(
+      <span key={`${keyPrefix}-link-${linkIndex}`}>
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          {label}
+        </a>
+      </span>
+    );
+
+    lastIndex = matchIndex + match[0].length;
+    linkIndex += 1;
+  }
+
+  const tail = text.slice(lastIndex);
+  if (tail) {
+    nodes.push(...renderAutoLinkedText(tail, `${keyPrefix}-tail`));
+  }
+
+  return nodes;
+}
+
 function renderBlock(block: ArticleContentBlock, key: string, fallbackTitle: string) {
   if (block.type === 'paragraph') {
-    return <p key={key}>{block.text}</p>;
+    return (
+      <p key={key} style={block.style}>
+        {renderTextWithLinks(block.text, key)}
+      </p>
+    );
   }
 
   if (block.type === 'list') {
@@ -35,7 +101,7 @@ function renderBlock(block: ArticleContentBlock, key: string, fallbackTitle: str
   if (block.type === 'image') {
     return (
       <figure key={key} className={`article-media article-media--${block.variant ?? 'default'}`}>
-        <img src={block.src} alt={block.alt} className="article-media__image" />
+        <img src={block.src} alt={block.alt} className="article-media__image" style={block.style} />
         {block.caption ? <figcaption className="article-media__caption">{block.caption}</figcaption> : null}
       </figure>
     );
@@ -46,7 +112,12 @@ function renderBlock(block: ArticleContentBlock, key: string, fallbackTitle: str
       <div className="article-gallery-block__grid">
         {block.images.map((image) => (
           <div key={`${key}-${image.src}`} className="article-gallery-block__item">
-            <img src={image.src} alt={image.alt || fallbackTitle} className="article-media__image" />
+            <img
+              src={image.src}
+              alt={image.alt || fallbackTitle}
+              className="article-media__image"
+              style={image.style}
+            />
             {image.label ? <span className="article-gallery-block__label">{image.label}</span> : null}
           </div>
         ))}
@@ -88,15 +159,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
       <section className="article-reading">
         <aside className="article-reading__aside">
-          <div className="article-aside card">
-            <p className="sidebar-title">Навигация</p>
-            <ul>
-              {article.outline.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-
           {relatedArticles.length > 0 ? (
             <div className="article-aside card card--soft">
               <p className="sidebar-title">Рядом по теме</p>
@@ -110,6 +172,26 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                     <span>{relatedArticle.subtopic}</span>
                     <strong>{relatedArticle.title}</strong>
                   </Link>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
+          {article.helpfulLinks && article.helpfulLinks.length > 0 ? (
+            <div className="article-aside card card--soft">
+              <p className="sidebar-title">Полезные ссылки к статье</p>
+              <div className="article-related">
+                {article.helpfulLinks.map((link) => (
+                  <a
+                    key={`${link.href}-${link.label}`}
+                    href={link.href}
+                    className="article-related__item"
+                    target={link.href.startsWith('http') ? '_blank' : undefined}
+                    rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  >
+                    <span>Ссылка</span>
+                    <strong>{link.label}</strong>
+                  </a>
                 ))}
               </div>
             </div>

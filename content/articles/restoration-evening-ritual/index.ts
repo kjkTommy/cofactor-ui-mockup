@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Тепло, которое продлевает жизнь',
   topicSlug: 'non-medical-care',
   subtopic: 'Сон',
-  image: '/assets/window-winter.jpg',
+  image: '/assets/cover.jpg',
   excerpt:
     'Банные правила — это искусство мягкой детоксикации, в котором управляемый стресс помогает активировать адаптационные механизмы организма и улучшить самочувствие.',
   publishedAt: '16 марта 2026',

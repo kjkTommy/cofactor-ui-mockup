@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Красота начинается с профилактики и дисциплины',
   topicSlug: 'about-woman-and-man',
   subtopic: 'Фокус',
-  image: '/assets/portrait-2.jpg',
+  image: '/assets/16-1.png',
   excerpt:
     'Весна традиционно ассоциируется с обновлением и красотой. Но эта связь не случайна. Изменения в окружающей среде оказывают непосредственное влияние на наше физическое и эмоциональное состояние.',
   publishedAt: '26 марта 2026',
@@ -27,7 +27,7 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/portrait-2.jpg',
+          src: '/assets/16-0.png',
           alt: 'Портрет Юлии Власовой',
           variant: 'aside',
           caption: '',
@@ -55,7 +55,7 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/p46.png',
+          src: '/assets/16-2.png',
           alt: '',
           caption: '',
         },
@@ -82,7 +82,7 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/group.jpg',
+          src: '/assets/16-1.png',
           alt: 'Группа пожилых людей',
           variant: 'aside',
           caption: '',
@@ -142,7 +142,7 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/portrait-1.jpg',
+          src: '/assets/16.png',
           alt: '',
           caption: '',
         },

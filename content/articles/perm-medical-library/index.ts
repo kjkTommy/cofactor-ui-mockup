@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Хранители времени и знаний: Медицинская библиотека в сердце Перми',
   topicSlug: 'peoples',
   subtopic: 'Места',
-  image: '/assets/window-winter.jpg',
+  image: '/assets/cover.jpg',
   excerpt:
     'Материал о Пермской краевой медицинской библиотеке: её истории, редких фондах, музейном статусе и роли живого ресурса для врачей и исследователей.',
   publishedAt: '04 апреля 2026',

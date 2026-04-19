@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Коса до пояса или как восстановить волосы',
   topicSlug: 'about-woman-and-man',
   subtopic: 'Привычки',
-  image: '/assets/cover.jpg',
+  image: '/assets/cosa-do-poyasa.jpg',
   excerpt:
     'Мы задали вопросы основателю клиники "Альтернатива" Екатерине Трофимовой о том, почему волосы стали выпадать даже у детей и как это остановить.',
   publishedAt: '28 марта 2026',
@@ -69,7 +69,7 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/portrait-1.jpg',
+          src: '/assets/kosa-do-poyasa-woman.png',
           alt: 'Екатерина Трофимова',
           variant: 'aside',
           caption:
@@ -94,24 +94,27 @@ export const article = createArticle({
       content: [
         {
           type: 'gallery',
-          caption: 'Блок «до / после» в нижней левой части страницы.',
           images: [
-            { src: '/assets/p12.png', alt: 'Результат лечения волос, фото до', label: 'До' },
-            { src: '/assets/p13.png', alt: 'Результат лечения волос, фото после', label: 'После' },
-            { src: '/assets/p18.png', alt: 'Результат лечения волос, фото до', label: 'До' },
-            { src: '/assets/p38.png', alt: 'Результат лечения волос, фото после', label: 'После' },
+            { src: '/assets/photo-volos-do.png', alt: 'Результат лечения волос, фото до', label: 'До' },
+            { src: '/assets/photo-volos-posle.png', alt: 'Результат лечения волос, фото после', label: 'После' },
           ],
         },
         {
           type: 'paragraph',
           text: '— Да, такая профилактика существует. Управляйте стрессом — это основа основ. Следите за питанием, избегайте жёстких диет и голодания. Регулярно проверяйте уровень витамина D, железа, фолиевой кислоты. Используйте натуральный уход за волосами. И помните: лучше предупредить проблему, чем потом долго лечить запущенную алопецию.',
         },
-        {
-          type: 'paragraph',
-          text: 'Подписи под QR-кодами: Альтернатива и greeful.ru.',
-        },
       ],
     },
   ],
   relatedSlugs: ['health-magnesium-guide', 'checkup-doctor-talk'],
+  helpfulLinks: [
+    {
+      label: 'Greeful в VK',
+      href: 'https://vk.ru/alterperm',
+    },
+    {
+      label: 'Greeful',
+      href: 'https://greeful.ru/',
+    },
+  ],
 });
