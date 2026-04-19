@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Жизнь без опоры',
   topicSlug: 'non-medical-care',
   subtopic: 'Восстановительные практики',
-  image: '/assets/cover.jpg',
+  image: '/assets/72-1.png',
   excerpt:
     'Текст о том, как жизнь в съёмном жилье незаметно включает режим выживания, и почему ощущение дома влияет на сон, ресурс и скорость восстановления.',
   publishedAt: '08 марта 2026',
@@ -28,16 +28,14 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/cover.jpg',
+          src: '/assets/72-1.png',
           alt: 'Фоновое фото многоэтажного дома с освещёнными окнами',
-          caption: 'ФОТО 1 — фоновое фото многоэтажного дома с освещёнными окнами, занимает левую и верхнюю часть страницы.',
         },
         {
           type: 'image',
-          src: '/assets/portrait-1.jpg',
+          src: '/assets/72-2.png',
           alt: 'Круглый портрет автора',
           variant: 'aside',
-          caption: 'ФОТО 2 — круглый портрет автора, левая центральная часть страницы. Ольга Корюнова.',
         },
         {
           type: 'paragraph',
@@ -79,12 +77,10 @@ export const article = createArticle({
         },
         {
           type: 'gallery',
-          caption: 'Страница 73 — Пермь: жилой комплекс, план квартиры, двор, QR и логотип.',
           images: [
-            { src: '/assets/p12.png', alt: 'Жилой комплекс в Перми', label: 'Фото 3' },
-            { src: '/assets/p13.png', alt: 'План квартиры в Перми', label: 'Схема 1' },
-            { src: '/assets/p18.png', alt: 'Жилой комплекс и двор в Перми', label: 'Фото 4' },
-            { src: '/assets/p51.png', alt: 'QR-код Пермь', label: 'QR 1' },
+            { src: '/assets/73-1.png', alt: 'Жилой комплекс в Перми'},
+            { src: '/assets/73-2.png', alt: 'План квартиры в Перми'},
+            { src: '/assets/73-3.png', alt: 'Жилой комплекс и двор в Перми', },
           ],
         },
         {
@@ -93,12 +89,11 @@ export const article = createArticle({
         },
         {
           type: 'gallery',
-          caption: 'Страница 74 — Санкт-Петербург: жилой комплекс у воды, план, дом, QR и логотип.',
           images: [
-            { src: '/assets/p38.png', alt: 'Жилой комплекс у воды', label: 'Фото 5' },
-            { src: '/assets/p46.png', alt: 'План квартиры в Санкт-Петербурге', label: 'Схема 2' },
-            { src: '/assets/group.jpg', alt: 'Жилой дом в Санкт-Петербурге', label: 'Фото 6' },
-            { src: '/assets/p51.png', alt: 'QR-код Санкт-Петербург', label: 'QR 2' },
+            { src: '/assets/74-1.png', alt: 'Жилой комплекс у воды',  },
+            { src: '/assets/74-2.png', alt: 'План квартиры в Санкт-Петербурге', },
+            { src: '/assets/75-1.png', alt: 'Жилой дом в Санкт-Петербурге',  },
+            { src: '/assets/75-2.png', alt: 'QR-код Санкт-Петербург', },
           ],
         },
         {
@@ -107,12 +102,10 @@ export const article = createArticle({
         },
         {
           type: 'gallery',
-          caption: 'Страница 75 — Москва: жилой комплекс, план, двор, QR и логотип.',
           images: [
-            { src: '/assets/leaves-left.jpg', alt: 'Жилой комплекс в Москве', label: 'Фото 7' },
-            { src: '/assets/leaves-right.jpg', alt: 'План квартиры в Москве', label: 'Схема 3' },
-            { src: '/assets/watch.jpg', alt: 'Двор жилого комплекса в Москве', label: 'Фото 8' },
-            { src: '/assets/p51.png', alt: 'QR-код Москва', label: 'QR 3' },
+            { src: '/assets/75-3.png', alt: 'Жилой комплекс в Москве', },
+            { src: '/assets/74-2.png', alt: 'План квартиры в Москве', },
+            { src: '/assets/75-1.png', alt: 'Двор жилого комплекса в Москве',},
           ],
         },
         {
@@ -136,4 +129,13 @@ export const article = createArticle({
     },
   ],
   relatedSlugs: ['financial-health-luxury', 'loneliness-strength-support'],
+  helpfulLinks: {
+    label: 'Получить персональную подборку квартир',
+    links: [
+      {
+        title: 'Ольга Корионова, слушатель',
+        href: 'https://vk.ru/redhome59',
+      },
+    ],
+  },
 });

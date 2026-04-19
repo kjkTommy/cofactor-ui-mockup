@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Осанка — фундамент статуса, красоты и здоровья',
   topicSlug: 'non-medical-care',
   subtopic: 'Восстановительные практики',
-  image: '/assets/portrait-1.jpg',
+  image: '/assets/62.png',
   excerpt:
     'Лариса Черных объясняет, почему в основе кинетического имиджа всегда лежит выстроенная ось тела, прямая спина и свободная шея, и как это влияет не только на впечатление, но и на здоровье.',
   publishedAt: '12 марта 2026',
@@ -32,10 +32,9 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/portrait-1.jpg',
+          src: '/assets/62.png',
           alt: 'Портрет Ларисы Черных на стуле',
           variant: 'aside',
-          caption: 'ФОТО 1 — портрет Ларисы Черных на стуле, верхняя правая часть страницы.',
         },
         {
           type: 'paragraph',
@@ -88,22 +87,23 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/portrait-2.jpg',
+          src: '/assets/63.png',
           alt: 'Лариса Черных в полный рост у зеркала',
-          caption: 'ФОТО 2 — Лариса Черных в полный рост у зеркала, правая центральная часть страницы.',
-        },
-        {
-          type: 'gallery',
-          caption: 'ИКОНКА 1 + QR 1 и ИКОНКА 2 + QR 2 — нижняя правая часть страницы. Справа внизу вертикально стоит слово «РЕКЛАМА».',
-          images: [
-            { src: '/assets/p12.png', alt: 'Иконка VK и QR-код', label: 'VK' },
-            { src: '/assets/p51.png', alt: 'QR-код VK', label: 'QR 1' },
-            { src: '/assets/p13.png', alt: 'Иконка Telegram и QR-код', label: 'Telegram' },
-            { src: '/assets/p38.png', alt: 'QR-код Telegram', label: 'QR 2' },
-          ],
         },
       ],
     },
   ],
   relatedSlugs: ['posture-active-longevity', 'tibetan-singing-bowls-meditation'],
+  helpfulLinks: {
+    label: 'По вопросам обращайтесь к Ларисе',
+    links: [
+      {
+        title: 'VK',
+        href: 'https://vk.ru/chernykh_larisa',
+      },{
+        title: 'Telegram',
+        href: 'https://t.me/chernykh_larisa',
+      }
+    ],
+  },
 });

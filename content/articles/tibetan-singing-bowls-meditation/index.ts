@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Медитации с тибетскими поющими чашами',
   topicSlug: 'non-medical-care',
   subtopic: 'Восстановительные практики',
-  image: '/assets/portrait-1.jpg',
+  image: '/assets/54.png',
   excerpt:
     'Это особая практика глубокого расслабления и восстановления через звук и вибрации древних тибетских чаш.',
   publishedAt: '14 марта 2026',
@@ -32,16 +32,8 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/p51.png',
-          alt: 'QR-код',
-          variant: 'aside',
-          caption: 'QR 1 — QR-код в правой верхней части страницы. Контакт: +7 (967) 903 75 00.',
-        },
-        {
-          type: 'image',
-          src: '/assets/portrait-1.jpg',
+          src: '/assets/54.png',
           alt: 'Крупный портрет Юлии Абрамовой с поющей чашей',
-          caption: 'ФОТО 1 — крупный портрет Юлии Абрамовой с поющей чашей, занимает основную часть страницы.',
         },
       ],
     },
@@ -115,12 +107,19 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/portrait-2.jpg',
+          src: '/assets/55.png',
           alt: 'Юлия Абрамова с поющими чашами',
-          caption: 'ФОТО 2 — Юлия Абрамова с поющими чашами, нижняя правая часть страницы. Справа внизу вертикально стоит слово «РЕКЛАМА».',
         },
       ],
     },
   ],
   relatedSlugs: ['neurographics-line-thinking', 'restoration-evening-ritual'],
+  helpfulLinks: {
+    links: [
+      {
+        title: 'Веб - сайт Юлии',
+        href: 'https://newmeditat.ru',
+      },
+    ],
+  },
 });

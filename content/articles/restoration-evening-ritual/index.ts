@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Тепло, которое продлевает жизнь',
   topicSlug: 'non-medical-care',
   subtopic: 'Сон',
-  image: '/assets/cover.jpg',
+  image: '/assets/50.png',
   excerpt:
     'Банные правила — это искусство мягкой детоксикации, в котором управляемый стресс помогает активировать адаптационные механизмы организма и улучшить самочувствие.',
   publishedAt: '16 марта 2026',
@@ -27,9 +27,8 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/window-winter.jpg',
+          src: '/assets/50-1.png',
           alt: 'Фоновое фото с полотенцем и банной тканью',
-          caption: 'ФОТО 1 — фоновое фото с полотенцем/банной тканью, занимает почти всю страницу.',
         },
         {
           type: 'list',
@@ -56,9 +55,8 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/window-spring.jpg',
+          src: '/assets/50-2.png',
           alt: 'Фоновое фото с чайниками, чашкой и травами',
-          caption: 'ФОТО 2 — фоновое фото с чайниками, чашкой и травами, нижняя часть страницы.',
         },
         {
           type: 'paragraph',

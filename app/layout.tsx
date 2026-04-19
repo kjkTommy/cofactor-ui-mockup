@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     template: '%s | КоФактор',
   },
   description: 'Редакционный журнал о здоровье, образе жизни, людях и среде.',
+  formatDetection: {
+    telephone: false,
+  },
   alternates: {
     canonical: '/',
   },

@@ -13,7 +13,7 @@ import { article as healthMagnesiumGuide } from '@/content/articles/health-magne
 import { article as healthWalkingBody } from '@/content/articles/health-walking-body';
 import { article as plantOilsKitchenGuide } from '@/content/articles/plant-oils-kitchen-guide';
 import { article as restorationBathWisdom } from '@/content/articles/restoration-bath-wisdom';
-import { article as restorationOfflineRest } from '@/content/articles/restoration-offline-rest';
+// import { article as restorationOfflineRest } from '@/content/articles/restoration-offline-rest';
 import { article as restorationEveningRitual } from '@/content/articles/restoration-evening-ritual';
 import { article as neurographicsLineThinking } from '@/content/articles/neurographics-line-thinking';
 import { article as tibetanSingingBowlsMeditation } from '@/content/articles/tibetan-singing-bowls-meditation';
@@ -47,7 +47,6 @@ export const articles: Article[] = [
   healthWalkingBody,
   plantOilsKitchenGuide,
   restorationBathWisdom,
-  restorationOfflineRest,
   restorationEveningRitual,
   neurographicsLineThinking,
   tibetanSingingBowlsMeditation,

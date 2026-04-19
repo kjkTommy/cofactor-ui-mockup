@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Иногда самые сильные люди оказываются самыми одинокими',
   topicSlug: 'non-medical-care',
   subtopic: 'Восстановительные практики',
-  image: '/assets/cover.jpg',
+  image: '/assets/picture-3.png',
   excerpt:
     'Предприниматели и молодые люди живут в разных контекстах, но часто переживают схожее состояние: страх быть непонятым и остаться без поддержки.',
   publishedAt: '10 марта 2026',
@@ -28,9 +28,8 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/p12.png',
+          src: '/assets/picture-2.png',
           alt: 'Два схематичных персонажа и дверь',
-          caption: 'ИЛЛЮСТРАЦИЯ 1 — два схематичных персонажа и дверь, центральная часть страницы.',
         },
         {
           type: 'paragraph',
@@ -72,9 +71,8 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/p13.png',
+          src: '/assets/picture-1.png',
           alt: 'Два персонажа на диване и один персонаж у двери',
-          caption: 'ИЛЛЮСТРАЦИЯ 2 — два персонажа на диване и один персонаж у двери, верхняя центральная часть страницы.',
         },
         {
           type: 'paragraph',
@@ -117,15 +115,16 @@ export const article = createArticle({
           type: 'paragraph',
           text: 'Ольга Корюнова, слушатель.',
         },
-        {
-          type: 'image',
-          src: '/assets/p51.png',
-          alt: 'QR-код',
-          variant: 'aside',
-          caption: 'QR 1 — QR-код в правом нижнем углу страницы. Справа внизу вертикально стоит слово «РЕКЛАМА».',
-        },
       ],
     },
   ],
   relatedSlugs: ['emotional-maturity-resilience', 'neurographics-line-thinking'],
+  helpfulLinks: {
+    links: [
+      {
+        title: 'Ольга Корионова, слушатель',
+        href: 'https://listener.pro',
+      },
+    ],
+  },
 });

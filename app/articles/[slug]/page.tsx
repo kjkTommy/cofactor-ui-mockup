@@ -13,24 +13,42 @@ export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
 }
 
-const URL_PATTERN = /(https?:\/\/[^\s]+)/g;
+const AUTO_LINK_PATTERN =
+  /(https?:\/\/[^\s]+|[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}|\+\d[\d()\s.-]{7,}\d)/gi;
 const MARKDOWN_LINK_PATTERN = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
 
 function renderAutoLinkedText(text: string, keyPrefix: string) {
-  const parts = text.split(URL_PATTERN);
+  const parts = text.split(AUTO_LINK_PATTERN);
 
   return parts.map((part, index) => {
-    if (!part.startsWith('http://') && !part.startsWith('https://')) {
+    const isUrl = part.startsWith('http://') || part.startsWith('https://');
+    const isEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(part);
+    const compactPhone = part.replace(/[^\d+]/g, '');
+    const isPhone = /^\+\d{8,15}$/.test(compactPhone);
+
+    if (!isUrl && !isEmail && !isPhone) {
       return part;
     }
 
-    const href = part.replace(/[),.;!?]+$/g, '');
-    const suffix = part.slice(href.length);
+    const cleaned = part.replace(/[),.;!?]+$/g, '');
+    const suffix = part.slice(cleaned.length);
+
+    const href = isUrl
+      ? cleaned
+      : isEmail
+        ? `mailto:${cleaned}`
+        : `tel:${cleaned.replace(/[^\d+]/g, '')}`;
+
+    const isExternal = href.startsWith('http://') || href.startsWith('https://');
 
     return (
       <span key={`${keyPrefix}-url-${index}`}>
-        <a href={href} target="_blank" rel="noopener noreferrer">
-          {href}
+        <a
+          href={href}
+          target={isExternal ? '_blank' : undefined}
+          rel={isExternal ? 'noopener noreferrer' : undefined}
+        >
+          {cleaned}
         </a>
         {suffix}
       </span>

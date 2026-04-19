@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Нейрографика: линия, которая меняет мышление',
   topicSlug: 'non-medical-care',
   subtopic: 'Восстановительные практики',
-  image: '/assets/p12.png',
+  image: '/assets/57-1.png',
   excerpt:
     'Нейрографика объединяет элементы арт-терапии, нейропсихологии и практик работы с бессознательным, помогая мягко снижать стресс, улучшать настроение и находить внутреннюю опору.',
   publishedAt: '15 марта 2026',
@@ -28,17 +28,9 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/portrait-2.jpg',
+          src: '/assets/56.png',
           alt: 'Портрет Ольги Путиковой на стуле',
           variant: 'aside',
-          caption: 'ФОТО 1 — портрет Ольги Путиковой на стуле, левая центральная часть страницы. Подпись: Психолог, коуч и инструктор нейрографики Ольга Путикова.',
-        },
-        {
-          type: 'image',
-          src: '/assets/p51.png',
-          alt: 'QR-код мастер-класса',
-          variant: 'aside',
-          caption: 'QR 1 — QR-код в левой средней части страницы. Подпись: Мастер класс 8 цветных желаний.',
         },
         {
           type: 'paragraph',
@@ -77,10 +69,9 @@ export const article = createArticle({
       content: [
         {
           type: 'gallery',
-          caption: 'ФОТО 2 и ФОТО 3 — абстрактные рисунки нейрографики в верхней части страницы.',
           images: [
-            { src: '/assets/p12.png', alt: 'Абстрактный рисунок нейрографики', label: 'Фото 2' },
-            { src: '/assets/p13.png', alt: 'Абстрактный рисунок нейрографики', label: 'Фото 3' },
+            { src: '/assets/57-1.png', alt: 'Абстрактный рисунок нейрографики', },
+            { src: '/assets/57-2.png', alt: 'Абстрактный рисунок нейрографики', },
           ],
         },
         {
@@ -109,12 +100,17 @@ export const article = createArticle({
           type: 'paragraph',
           text: 'Нейрографика начинается с линии. А иногда именно с неё начинается новый этап жизни.',
         },
-        {
-          type: 'paragraph',
-          text: 'Справа внизу вертикально стоит слово «РЕКЛАМА».',
-        },
       ],
     },
   ],
   relatedSlugs: ['restoration-evening-ritual', 'restoration-offline-rest'],
+  helpfulLinks: {
+    label: 'Мастер класс',
+    links: [
+      {
+        title: '8 заветных желаний',
+        href: 'https://vkvideo.ru/video-199165840_456239213/',
+      },
+    ],
+  },
 });
