@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Собрала для вас базу, с которой начинается здоровье',
   topicSlug: 'buzzers',
   subtopic: 'Профилактика',
-  image: '/assets/portrait-1.jpg',
+  image: '/assets/86-1.png',
   excerpt:
     'Наталья Гладких объясняет, почему подростковые жалобы на кожу, волосы и запах тела стоит рассматривать как понятные сигналы организма, а не как «норму у всех».',
   publishedAt: '04 апреля 2026',
@@ -28,10 +28,9 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/portrait-1.jpg',
+          src: '/assets/86-1.png',
           alt: 'Портрет Натальи Гладких',
           variant: 'aside',
-          caption: 'ФОТО 1 — портрет Натальи Гладких, верхняя левая часть страницы.',
         },
         {
           type: 'paragraph',
@@ -65,7 +64,6 @@ export const article = createArticle({
       content: [
         {
           type: 'list',
-          title: 'СХЕМА 1 — Что усиливает проблемы с кожей и запахом:',
           items: [
             'Избыток сахара и ультрапереработанной еды',
             'Дефицит белка, железа, цинка и витаминов группы B',
@@ -97,9 +95,8 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/window-spring.jpg',
+          src: '/assets/87.png',
           alt: 'Вертикальное фоновое фото справа',
-          caption: 'ФОТО 2 — вертикальное фоновое фото справа, занимает правый край страницы. ДЕКОР 1 — стрелка в нижней правой части страницы.',
         },
       ],
     },

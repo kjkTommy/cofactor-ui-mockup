@@ -30,7 +30,7 @@ import { article as industrialCityHealthCulture } from '@/content/articles/indus
 import { article as sportPointOfSupport } from '@/content/articles/sport-point-of-support';
 import { article as permMedicalLibrary } from '@/content/articles/perm-medical-library';
 import { article as eastForTheStrong } from '@/content/articles/east-for-the-strong';
-import { article as pagesThatChange } from '@/content/articles/pages-that-change';
+// import { article as pagesThatChange } from '@/content/articles/pages-that-change';
 
 export const articles: Article[] = [
   balanceSoftRhythm,
@@ -63,7 +63,6 @@ export const articles: Article[] = [
   sportPointOfSupport,
   permMedicalLibrary,
   eastForTheStrong,
-  pagesThatChange,
 ];
 
 export function getArticleBySlug(slug: string) {

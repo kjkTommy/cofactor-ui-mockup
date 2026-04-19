@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Страницы, которые меняют',
   topicSlug: 'peoples',
   subtopic: 'Подборки',
-  image: '/assets/portrait-2.jpg',
+  image: '/assets/66.png',
   excerpt:
     'Анастасия Полянина собрала книги о привычках, планировании, творчестве и преодолении самосаботажа для мягкого весеннего перезапуска.',
   publishedAt: '04 апреля 2026',
@@ -27,14 +27,9 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/portrait-2.jpg',
+          src: '/assets/66.png',
           alt: 'Портрет Анастасии Поляниной',
-          variant: 'aside',
-          caption: 'ФОТО 1 — портрет Анастасии Поляниной, верхняя левая часть страницы.',
-        },
-        {
-          type: 'paragraph',
-          text: 'ПЛАШКА 1 — голубой овальный текстовый блок в верхней части страницы: «Любимое время года для вдохновения и мягкого перезапуска — весна. В книжной рубрике этого сезона я предлагаю пересмотреть ваши планы с позиции заботливо подобранных книг о планировании, привычках, творчестве и преодолении самосаботажа».',
+          variant: 'default',
         },
       ],
     },
@@ -43,10 +38,9 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/p12.png',
+          src: '/assets/66-2.png',
           alt: 'Обложка книги «Атомные привычки»',
           variant: 'aside',
-          caption: 'ФОТО 2 — обложка книги «Атомные привычки», левая часть первого блока.',
         },
         {
           type: 'paragraph',
@@ -56,16 +50,12 @@ export const article = createArticle({
           type: 'paragraph',
           text: 'Цитата: «Успех — это не цель, которую надо достичь, не финишная черта, которую надо пересечь. Это система улучшений».',
         },
-        {
-          type: 'paragraph',
-          text: 'ПЛАШКА 2 — оранжевый блок с описанием первой книги.',
-        },
+
         {
           type: 'image',
-          src: '/assets/p13.png',
+          src: '/assets/66-3.png',
           alt: 'Обложка книги «Большое волшебство»',
-          variant: 'aside',
-          caption: 'ФОТО 3 — обложка книги «Большое волшебство», левая часть второго блока.',
+          variant: 'default',
         },
         {
           type: 'paragraph',
@@ -74,10 +64,6 @@ export const article = createArticle({
         {
           type: 'paragraph',
           text: 'Цитата: «Вдохновение не является редким или мистическим явлением. Оно доступно каждому, кто готов работать».',
-        },
-        {
-          type: 'paragraph',
-          text: 'ПЛАШКА 3 — розовый блок с описанием второй книги.',
         },
       ],
     },

@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Здоровье в промышленном городе: как формируется новая культура жизни',
   topicSlug: 'peoples',
   subtopic: 'Проекты',
-  image: '/assets/group.jpg',
+  image: '/assets/82-1.png',
   excerpt:
     'Проект Пермской торгово-промышленной палаты объединяет семью, школу, бизнес и городское сообщество вокруг здоровых привычек, движения и культуры питания.',
   publishedAt: '04 апреля 2026',
@@ -31,22 +31,15 @@ export const article = createArticle({
           text: 'Если взрослые, бизнесмены, бабушки и дедушки — любой желающий может начать менять свою жизнь в лучшую сторону при помощи инструментов, транслируемых ПТПП в массы. Забота о здоровье может быть частью обычной жизни: в семье, в школе, на работе и даже во время выходных в городе.',
         },
         {
-          type: 'paragraph',
-          text: 'ПЛАШКА 1 — зелёная шапка в верхней части страницы.',
-        },
-        {
           type: 'gallery',
-          caption: 'ФОТО 1 и ФОТО 2 — участники проекта, награждение и круглый стол.',
           images: [
             {
-              src: '/assets/group.jpg',
+              src: '/assets/82-1.png',
               alt: 'Группа людей с тортом и дипломами',
-              label: 'Фото 1',
             },
             {
-              src: '/assets/window-winter.jpg',
+              src: '/assets/82-2.png',
               alt: 'Круглый стол или совещание участников',
-              label: 'Фото 2',
             },
           ],
         },
@@ -107,38 +100,16 @@ export const article = createArticle({
         },
         {
           type: 'gallery',
-          caption: 'ФОТО 3 и ФОТО 4 — мастер-класс и материалы проекта. Ниже — логотипы и QR-код.',
           images: [
             {
-              src: '/assets/leaves-left.jpg',
+              src: '/assets/83-1.png',
               alt: 'Люди готовят еду или участвуют в мастер-классе',
-              label: 'Фото 3',
             },
             {
-              src: '/assets/watch.jpg',
+              src: '/assets/83-2.png',
               alt: 'Материалы на столе и цветы',
-              label: 'Фото 4',
-            },
-            {
-              src: '/assets/p12.png',
-              alt: 'Логотип Пермской торгово-промышленной палаты',
-              label: 'Лого 1',
-            },
-            {
-              src: '/assets/p13.png',
-              alt: 'Логотип проекта «Здоровье в промышленном городе»',
-              label: 'Лого 2',
-            },
-            {
-              src: '/assets/p51.png',
-              alt: 'QR-код проекта',
-              label: 'QR 1',
             },
           ],
-        },
-        {
-          type: 'paragraph',
-          text: 'ПЛАШКА 2 — зелёный блок в верхней части страницы. ПЛАШКА 3 — зелёный блок внизу страницы.',
         },
         {
           type: 'paragraph',
@@ -148,4 +119,13 @@ export const article = createArticle({
     },
   ],
   relatedSlugs: ['life-without-support-housing', 'financial-health-luxury'],
+  helpfulLinks: {
+    label: 'Здоровье в промышленном городе',
+    links: [
+      {
+        title: 'Вступить в Палату',
+        href: 'https://permtpp.ru/projects/ustoychivoe-razvitie-esg/zdorove-v-promyshlennom-gorode/',
+      }
+    ],
+  },
 });

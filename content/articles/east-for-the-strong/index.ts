@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Восток для сильных',
   topicSlug: 'peoples',
   subtopic: 'Истории',
-  image: '/assets/cover.jpg',
+  image: '/assets/78-full.png',
   excerpt:
     'Елена Растягина рассказывает о поездке на Курилы, съемках документального кино и экспедиции, где наука, путешествие и реабилитация ветеранов СВО соединились в один большой маршрут.',
   publishedAt: '04 апреля 2026',
@@ -28,16 +28,10 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/cover.jpg',
-          alt: 'Море и вулкан',
-          caption: 'ФОТО 1 — фоновое фото моря и вулкана, занимает всю страницу.',
-        },
-        {
-          type: 'image',
-          src: '/assets/portrait-2.jpg',
+          src: '/assets/78-1.png',
           alt: 'Портрет Елены Растягиной',
           variant: 'aside',
-          caption: 'ФОТО 2 — портрет Елены Растягиной, нижняя правая часть страницы. Елена Растягина, драматург театра «Открытый код», сценарист.',
+          style: {minHeight: '300px'},
         },
         {
           type: 'paragraph',
@@ -50,9 +44,8 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/window-spring.jpg',
+          src: '/assets/78-full.png',
           alt: 'Море, кит и горы',
-          caption: 'ФОТО 3 — фоновое фото моря, кита и гор, занимает всю страницу.',
         },
         {
           type: 'paragraph',
@@ -73,10 +66,9 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/window-winter.jpg',
+          src: '/assets/80-2.png',
           alt: 'Пейзаж с вулканом и людьми',
           variant: 'aside',
-          caption: 'ФОТО 4 — пейзаж с вулканом и людьми, верхняя правая часть страницы.',
         },
         {
           type: 'paragraph',
@@ -88,9 +80,8 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/group.jpg',
+          src: '/assets/80-1.png',
           alt: 'Двое участников экспедиции с сачком',
-          caption: 'ФОТО 5 — двое участников экспедиции с сачком, нижняя левая часть страницы.',
         },
         {
           type: 'paragraph',
@@ -107,9 +98,8 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/leaves-left.jpg',
+          src: '/assets/81-1.png',
           alt: 'Пейзаж с вулканом и участниками экспедиции',
-          caption: 'ФОТО 6 — пейзаж с вулканом и туристами/участниками, верхняя левая часть страницы.',
         },
         {
           type: 'paragraph',
@@ -129,9 +119,8 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/p13.png',
+          src: '/assets/81-2.png',
           alt: 'Группа людей у вертолёта',
-          caption: 'ФОТО 7 — группа людей у вертолёта, нижняя левая часть страницы.',
         },
       ],
     },

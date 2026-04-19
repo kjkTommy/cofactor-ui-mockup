@@ -36,14 +36,6 @@ export default function AboutPage() {
             ссылки на источник.
           </p>
         </article>
-        <aside className="card about-side">
-          <img src="/assets/editor.jpg" alt="Издатель журнала" className="about-side__portrait" />
-          <h2>Редакция</h2>
-          <p>
-            Издатель, редакция, авторы и приглашенные эксперты собраны в более камерной и
-            доверительной подаче.
-          </p>
-        </aside>
       </section>
 
       <section className="team-grid">
@@ -59,13 +51,6 @@ export default function AboutPage() {
           <div>
             <h3>Редакционный стиль</h3>
             <p>Используются мягкие блоки текста, тонкие рамки и ровные поля.</p>
-          </div>
-        </article>
-        <article className="team-card card">
-          <img src="/assets/group.jpg" alt="Команда" />
-          <div>
-            <h3>Комьюнити</h3>
-            <p>Групповые фотографии работают как живой якорь между длинными текстовыми блоками.</p>
           </div>
         </article>
       </section>

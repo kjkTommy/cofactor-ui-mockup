@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Хранители времени и знаний: Медицинская библиотека в сердце Перми',
   topicSlug: 'peoples',
   subtopic: 'Места',
-  image: '/assets/cover.jpg',
+  image: '/assets/77-2.png',
   excerpt:
     'Материал о Пермской краевой медицинской библиотеке: её истории, редких фондах, музейном статусе и роли живого ресурса для врачей и исследователей.',
   publishedAt: '04 апреля 2026',
@@ -32,9 +32,8 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/window-winter.jpg',
+          src: '/assets/76-1.png',
           alt: 'Женщина работает с книгой за столом',
-          caption: 'ФОТО 1 — женщина работает с книгой за столом, нижняя левая часть страницы.',
         },
         {
           type: 'paragraph',
@@ -60,10 +59,9 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/group.jpg',
+          src: '/assets/76-2.png',
           alt: 'Библиотекарь или экспозиция с книгами и документами',
           variant: 'aside',
-          caption: 'ФОТО 2 — библиотекарь/экспозиция с книгами и документами, верхняя правая часть страницы.',
         },
         {
           type: 'paragraph',
@@ -83,9 +81,8 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/p13.png',
+          src: '/assets/76-3.png',
           alt: 'Старые денежные купюры или документы',
-          caption: 'ФОТО 3 — старые денежные купюры/документы, нижняя правая часть страницы.',
         },
       ],
     },
@@ -106,22 +103,14 @@ export const article = createArticle({
         },
         {
           type: 'gallery',
-          caption: 'ФОТО 4, ФОТО 5 и QR 1 — страницы 77.',
           images: [
             {
-              src: '/assets/leaves-right.jpg',
+              src: '/assets/77-1.png',
               alt: 'Полки со старыми книгами',
-              label: 'Фото 4',
             },
             {
-              src: '/assets/portrait-2.jpg',
+              src: '/assets/77-2.png',
               alt: 'Две женщины на фоне стенда «Пермский край»',
-              label: 'Фото 5',
-            },
-            {
-              src: '/assets/p51.png',
-              alt: 'QR-код библиотеки',
-              label: 'QR 1',
             },
           ],
         },
@@ -141,4 +130,13 @@ export const article = createArticle({
     },
   ],
   relatedSlugs: ['industrial-city-health-culture', 'sport-point-of-support'],
+  helpfulLinks: {
+    label: 'Пермская краевая медицинская библиотека',
+    links: [
+      {
+        title: 'Посетить сайт библиотеки',
+        href: 'https://miac.permkrai.ru/pkmb/pkmb/',
+      }
+    ],
+  },
 });
