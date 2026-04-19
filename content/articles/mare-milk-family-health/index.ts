@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Молоко — самый первый продукт и знакомство с миром',
   topicSlug: 'supplements',
   subtopic: 'Экспертные колонки',
-  image: '/assets/portrait-1.jpg',
+  image: '/assets/24-2.png',
   excerpt:
     'Текст о здоровье женщины, роли микробиома и потенциале кобыльего молока как продукта с составом, близким к женскому молоку.',
   publishedAt: '22 марта 2026',
@@ -28,10 +28,10 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/portrait-1.jpg',
+          src: '/assets/24.png',
           alt: 'Портрет Татьяны Юрьевны Даниелян',
+          style: {height: '320px'},
           variant: 'aside',
-          caption: 'ФОТО 1 — портрет Татьяны Юрьевны Даниелян, верхняя левая часть страницы.',
         },
         {
           type: 'paragraph',
@@ -60,9 +60,8 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/group.jpg',
+          src: '/assets/24-2.png',
           alt: 'Семья с лошадьми на поле',
-          caption: 'ФОТО 2 — семья с лошадьми на поле, нижняя правая часть страницы.',
         },
       ],
     },
@@ -71,10 +70,9 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/p46.png',
+          src: '/assets/25-1.png',
           alt: 'Банка продукта «молоко кобылье семейное»',
           variant: 'aside',
-          caption: 'ФОТО 3 — банка продукта «молоко кобылье семейное», верхняя правая часть страницы.',
         },
         {
           type: 'paragraph',
@@ -109,16 +107,21 @@ export const article = createArticle({
           type: 'paragraph',
           text: 'Пермь, Героев Хасана, 9, офис SEPTEM VITAM, в «Biotron - центр активации молодости Ольги Лядовой». Санаторий «Усть-Качка», Бальнеолечебница, 2 этаж.',
         },
-        {
-          type: 'gallery',
-          caption: 'QR 1 и QR 2 — нижняя правая часть страницы. Справа внизу вертикально стоит слово «РЕКЛАМА».',
-          images: [
-            { src: '/assets/p51.png', alt: 'Зелёный QR-код', label: 'QR 1' },
-            { src: '/assets/p38.png', alt: 'Фиолетовый QR-код', label: 'QR 2' },
-          ],
-        },
+
       ],
     },
   ],
   relatedSlugs: ['menopause-hidden-risks', 'health-magnesium-guide'],
+  helpfulLinks: {
+    label: 'Ищите продукцию здесь',
+    links: [
+      {
+        title: 'MAX',
+        href: 'https://max.ru/u/f9LHodD0cOLg1zZ2Zd56fkf3tevpgFHSfOMGRYHqCL8Kl-FG6NVIKjw9S8E',
+      },{
+        title: 'Telegram',
+        href: 'https://t.me/ElenaTolkach',
+      }
+    ],
+  },
 });

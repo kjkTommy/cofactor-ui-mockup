@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Какой магний выбрать: турецкий или американский?',
   topicSlug: 'supplements',
   subtopic: 'Экспертные колонки',
-  image: '/assets/portrait-1.jpg',
+  image: '/assets/46.png',
   excerpt:
     'Провизор Анна объясняет, зачем нужен магний, какие формы бывают и чем турецкие варианты отличаются от американских.',
   publishedAt: '04 апреля 2026',
@@ -28,9 +28,8 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/portrait-1.jpg',
+          src: '/assets/46.png',
           alt: 'Анна на фоне полки с БАДами',
-          caption: 'ФОТО 1 — крупный портрет Анны на фоне полки с БАДами, верхняя часть страницы.',
         },
         {
           type: 'paragraph',
@@ -95,10 +94,9 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/group.jpg',
+          src: '/assets/47-1.png',
           alt: 'Три банки магния',
           variant: 'aside',
-          caption: 'ФОТО 2 — три банки магния, верхняя правая часть страницы.',
         },
         {
           type: 'paragraph',
@@ -145,21 +143,17 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/p46.png',
+          src: '/assets/47-1.png',
           alt: 'Банка Magnesium Citrate',
-          caption: 'ФОТО 3 — банка Magnesium Citrate, нижняя правая часть страницы.',
         },
         {
           type: 'paragraph',
-          text: 'ПЛАШКА 2 — голубой блок внизу страницы: «Мой вывод: сегодня турецкий рынок БАД значительно вырос как по качеству, так и по разнообразию, и, следовательно, он вполне может заменить американские бренды, которые в России стоят гораздо дороже».',
-        },
-        {
-          type: 'gallery',
-          caption: 'QR 1 — QR-код в нижней правой части страницы. ИКОНКА 1 — круглая иконка VK рядом с QR-кодом. Справа внизу вертикально стоит слово «РЕКЛАМА».',
-          images: [
-            { src: '/assets/p51.png', alt: 'QR-код', label: 'QR 1' },
-            { src: '/assets/p38.png', alt: 'Иконка VK', label: 'VK' },
-          ],
+          text: '«Мой вывод: сегодня турецкий рынок БАД значительно вырос как по качеству, так и по разнообразию, и, следовательно, он вполне может заменить американские бренды, которые в России стоят гораздо дороже».',
+          style: {
+            backgroundColor: '#c0def5',
+            padding: '20px',
+            borderRadius: '24px',
+          }
         },
       ],
     },
