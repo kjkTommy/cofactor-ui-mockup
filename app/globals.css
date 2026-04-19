@@ -1281,6 +1281,13 @@ select {
 
 .article-gallery-block__item {
   position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.article-gallery-block__item .article-media__image {
+  height: 100%;
 }
 
 .article-gallery-block__item:only-child {

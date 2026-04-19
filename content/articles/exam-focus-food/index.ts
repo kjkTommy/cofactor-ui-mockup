@@ -4,7 +4,7 @@ export const article = createArticle({
   slug: 'exam-focus-food',
   title: 'Если мозг — твой главный инструмент, логично дать ему нормальное топливо',
   topicSlug: 'buzzers',
-  subtopic: 'Привычки',
+  subtopic: 'Советы',
   image: '/assets/leaves-right.jpg',
   excerpt:
     'Короткий материал о том, какие продукты помогают фокусу, памяти и стрессоустойчивости во время экзаменов.',

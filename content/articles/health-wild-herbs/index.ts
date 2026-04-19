@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Не усложняйте!',
   topicSlug: 'healthy-food',
   subtopic: 'Общее здоровье',
-  image: '/assets/leaves-left.jpg',
+  image: '/assets/30.png',
   excerpt:
     'Наталья Гладких уверена, что родная средняя полоса России изобилует местными суперпродуктами, которые мы зачастую недооцениваем.',
   publishedAt: '22 марта 2026',
@@ -41,9 +41,8 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/leaves-left.jpg',
+          src: '/assets/30.png',
           alt: 'Овощи и фрукты в руках',
-          caption: 'ФОТО 1 — овощи и фрукты в руках, нижняя левая часть страницы.',
         },
         {
           type: 'paragraph',
@@ -60,10 +59,10 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/leaves-right.jpg',
+          src: '/assets/31.png',
           alt: 'Женщина за столом с фруктами',
           variant: 'aside',
-          caption: 'ФОТО 2 — женщина за столом с фруктами, верхняя правая часть страницы.',
+          style: {maxHeight: '345px'},
         },
         {
           type: 'paragraph',

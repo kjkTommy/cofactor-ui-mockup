@@ -107,7 +107,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         <div className="shell footer__grid">
           <div>
             <div className="brand brand--sm">КоФактор</div>
-            <p className="muted">Первый пермский журнал о превентивной медицине в формате digital editorial mockup.</p>
+            <p className="muted">Первый пермский журнал о превентивной медицине</p>
           </div>
           <div>
             <p className="footer__title">Навигация</p>

@@ -3,7 +3,7 @@ import { getHomeFeed } from '@/lib/content';
 import { getTopicLabel } from '@/data/topics';
 
 export function HomeSections() {
-  const { leadStory, riverStories, gridStories, tags } = getHomeFeed();
+  const { leadStory, riverStories, gridStories } = getHomeFeed();
 
   if (!leadStory) {
     return null;
@@ -45,13 +45,6 @@ export function HomeSections() {
           </div>
         </div>
 
-        <div className="editorial-topics">
-          {tags.map((tag) => (
-            <span key={tag} className="editorial-topics__item">
-              {tag}
-            </span>
-          ))}
-        </div>
       </section>
 
       <section className="shell section-gap editorial-grid-articles">

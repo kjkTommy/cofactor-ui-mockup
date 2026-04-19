@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Весенняя охота за энергией',
   topicSlug: 'healthy-food',
   subtopic: 'Спорт',
-  image: '/assets/watch.jpg',
+  image: '/assets/39-2.png',
   excerpt:
     'Если мы остановимся и будем внимательны к природе, то увидим, что она изобильна, и она за нас на все 100%.',
   publishedAt: '19 марта 2026',
@@ -28,10 +28,9 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/watch.jpg',
+          src: '/assets/39-3.png',
           alt: 'Книга о дикоросах и корнях',
           variant: 'aside',
-          caption: 'ФОТО 1 — узкий вертикальный фрагмент с книгой о дикоросах и корнями, правая верхняя часть страницы.',
         },
         {
           type: 'paragraph',
@@ -69,12 +68,11 @@ export const article = createArticle({
       content: [
         {
           type: 'gallery',
-          caption: 'ФОТО 2, ФОТО 3, ФОТО 4 и ФОТО 5 — коллажи и натюрморты с дикоросами на странице 39.',
           images: [
-            { src: '/assets/leaves-left.jpg', alt: 'Большой коллаж с травами, посудой и подписью «Дикоросы»', label: 'Фото 2' },
-            { src: '/assets/group.jpg', alt: 'Букет трав, ягод и грибов', label: 'Фото 3' },
-            { src: '/assets/leaves-right.jpg', alt: 'Луговые травы и цветы на солнце', label: 'Фото 4' },
-            { src: '/assets/p38.png', alt: 'Ромашки и луговые цветы', label: 'Фото 5' },
+            { src: '/assets/39-1.png', alt: 'Большой коллаж с травами, посудой и подписью «Дикоросы»',},
+            { src: '/assets/39-2.png', alt: 'Букет трав, ягод и грибов', },
+            { src: '/assets/39-3.png', alt: 'Луговые травы и цветы на солнце', },
+            { src: '/assets/39-4.png', alt: 'Ромашки и луговые цветы', },
           ],
         },
         {
@@ -100,9 +98,8 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/p12.png',
+          src: '/assets/40-1.png',
           alt: 'Готовые кутабы на тарелке',
-          caption: 'ФОТО 6 — готовые кутабы на тарелке, левая часть страницы.',
         },
         {
           type: 'list',
@@ -135,9 +132,8 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/p13.png',
+          src: '/assets/40-2.png',
           alt: 'Зелёный рулет',
-          caption: 'ФОТО 7 — зелёный рулет, левая нижняя часть страницы.',
         },
         {
           type: 'list',
@@ -185,9 +181,8 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/p18.png',
+          src: '/assets/41-1.png',
           alt: 'Запеканка в форме',
-          caption: 'ФОТО 8 — запеканка в форме, левая верхняя часть страницы.',
         },
         {
           type: 'list',
@@ -223,9 +218,8 @@ export const article = createArticle({
         },
         {
           type: 'image',
-          src: '/assets/p46.png',
+          src: '/assets/41-2.png',
           alt: 'Тарелка с варениками',
-          caption: 'ФОТО 9 — тарелка с варениками, левая нижняя часть страницы.',
         },
         {
           type: 'list',

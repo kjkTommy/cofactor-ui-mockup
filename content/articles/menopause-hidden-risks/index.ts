@@ -148,10 +148,12 @@ export const article = createArticle({
     },
   ],
   relatedSlugs: ['mare-milk-family-health', 'alexinia-longevity-dialogue'],
-  helpfulLinks: [
-    {
-      label: 'Органик Логос',
-      href: 'https://organiclogos.ru/',
-    },
-  ],
+  helpfulLinks: {
+    links: [
+      {
+        title: 'Органик Логос',
+        href: 'https://organiclogos.ru/',
+      },
+    ],
+  },
 });

@@ -23,7 +23,6 @@ export function getHomeFeed() {
       getArticleBySlug('health-magnesium-guide'),
       getArticleBySlug('restoration-bath-wisdom'),
     ].filter(isArticle),
-    tags: ['здоровье', 'питание', 'гармония внутри', 'лайфстайл', 'интервью', 'эксперименты'],
   };
 }
 

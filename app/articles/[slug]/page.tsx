@@ -177,20 +177,20 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
             </div>
           ) : null}
 
-          {article.helpfulLinks && article.helpfulLinks.length > 0 ? (
+          {article.helpfulLinks && article.helpfulLinks.links.length > 0 ? (
             <div className="article-aside card card--soft">
-              <p className="sidebar-title">Полезные ссылки к статье</p>
+              <p className="sidebar-title">{article.helpfulLinks.label ?? 'Полезные ссылки к статье'}</p>
               <div className="article-related">
-                {article.helpfulLinks.map((link) => (
+                {article.helpfulLinks.links.map((link) => (
                   <a
-                    key={`${link.href}-${link.label}`}
+                    key={`${link.href}-${link.title}`}
                     href={link.href}
                     className="article-related__item"
                     target={link.href.startsWith('http') ? '_blank' : undefined}
                     rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   >
                     <span>Ссылка</span>
-                    <strong>{link.label}</strong>
+                    <strong>{link.title}</strong>
                   </a>
                 ))}
               </div>

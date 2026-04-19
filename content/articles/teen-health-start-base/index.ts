@@ -4,7 +4,7 @@ export const article = createArticle({
   slug: 'teen-health-start-base',
   title: 'Собрала для вас базу, с которой начинается здоровье',
   topicSlug: 'buzzers',
-  subtopic: 'Привычки',
+  subtopic: 'Профилактика',
   image: '/assets/portrait-1.jpg',
   excerpt:
     'Наталья Гладких объясняет, почему подростковые жалобы на кожу, волосы и запах тела стоит рассматривать как понятные сигналы организма, а не как «норму у всех».',

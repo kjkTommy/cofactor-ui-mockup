@@ -59,10 +59,13 @@ export type ArticleSeed = {
   }>;
   gallery?: string[];
   relatedSlugs?: string[];
-  helpfulLinks?: Array<{
-    label: string;
-    href: string;
-  }>;
+  helpfulLinks?: {
+    label?: string;
+    links: Array<{
+      title: string;
+      href: string;
+    }>;
+  };
 };
 
 export type Article = ArticleSeed & {

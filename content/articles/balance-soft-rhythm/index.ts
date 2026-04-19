@@ -107,14 +107,16 @@ export const article = createArticle({
     },
   ],
   relatedSlugs: ['health-magnesium-guide', 'checkup-doctor-talk'],
-  helpfulLinks: [
-    {
-      label: 'Greeful в VK',
-      href: 'https://vk.ru/alterperm',
-    },
-    {
-      label: 'Greeful',
-      href: 'https://greeful.ru/',
-    },
-  ],
+  helpfulLinks: {
+    links: [
+      {
+        title: 'Greeful в VK',
+        href: 'https://vk.ru/alterperm',
+      },
+      {
+        title: 'Greeful',
+        href: 'https://greeful.ru/',
+      },
+    ],
+  },
 });

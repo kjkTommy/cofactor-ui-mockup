@@ -5,7 +5,7 @@ export const article = createArticle({
   title: 'Почему ферментация — это мировой тренд и как включить ферментированные продукты в рацион?',
   topicSlug: 'healthy-food',
   subtopic: 'Экспертные колонки',
-  image: '/assets/p46.png',
+  image: '/assets/32-1.png',
   excerpt:
     'Поддержать иммунитет, микробиом, а с ними молодость и красоту помогут ферментированные продукты. За 2 минуты вы узнаете, что такое ферментация и как включить ее в меню.',
   publishedAt: '20 марта 2026',
@@ -28,10 +28,9 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/p46.png',
+          src: '/assets/33.png',
           alt: 'Женщина с банками ферментированных продуктов',
           variant: 'aside',
-          caption: 'ФОТО 1 — женщина с банками ферментированных продуктов, левая часть страницы.',
         },
         {
           type: 'paragraph',
@@ -56,11 +55,9 @@ export const article = createArticle({
       content: [
         {
           type: 'gallery',
-          caption: 'ФОТО 2, ФОТО 3 и ФОТО 4 — банки с ферментированными заготовками в нижней части страницы.',
           images: [
-            { src: '/assets/p18.png', alt: 'Банка с морковью', label: 'Фото 2' },
-            { src: '/assets/p12.png', alt: 'Две банки с заготовками', label: 'Фото 3' },
-            { src: '/assets/p13.png', alt: 'Банка с капустой или овощной смесью', label: 'Фото 4' },
+            { src: '/assets/32-3.png', alt: 'Банка с морковью' },
+            { src: '/assets/32-4.png', alt: 'Две банки с заготовками'},
           ],
         },
       ],
@@ -70,9 +67,8 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/portrait-2.jpg',
+          src: '/assets/33.png',
           alt: 'Вероника Порсина с кочаном капусты',
-          caption: 'ФОТО 5 — крупное фото Вероники Порсиной с кочаном капусты, верхняя часть страницы.',
         },
         {
           type: 'paragraph',
@@ -112,20 +108,21 @@ export const article = createArticle({
         },
       ],
     },
-    {
-      heading: 'Где искать больше рецептов и пользы',
-      content: [
-        {
-          type: 'gallery',
-          caption: 'QR 1, QR 2 и QR 3 — нижний ряд страницы. В правом нижнем углу страницы вертикально стоит слово «РЕКЛАМА».',
-          images: [
-            { src: '/assets/p51.png', alt: 'QR 1', label: 'QR 1' },
-            { src: '/assets/p38.png', alt: 'QR 2', label: 'QR 2' },
-            { src: '/assets/zipper.jpg', alt: 'QR 3', label: 'QR 3' },
-          ],
-        },
-      ],
-    },
   ],
   relatedSlugs: ['health-wild-herbs', 'health-walking-body'],
+  helpfulLinks: {
+    label: 'Ищите больше рецептов и пользы здесь',
+    links: [
+      {
+        title: 'VK',
+        href: 'https://vk.com/veronikaporsina_club',
+      },{
+        title: 'Telegram',
+        href: 'https://t.me/veronikaporsina_club',
+      },{
+        title: 'Web site',
+        href: 'https://vitafiesta.getcourse.ru/main',
+      },
+    ],
+  },
 });

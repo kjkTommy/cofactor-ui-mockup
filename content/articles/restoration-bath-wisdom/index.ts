@@ -3,9 +3,9 @@ import { createArticle } from '@/lib/content/helpers';
 export const article = createArticle({
   slug: 'restoration-bath-wisdom',
   title: 'Персонализированный подход к здоровью',
-  topicSlug: 'non-medical-care',
-  subtopic: 'Баня',
-  image: '/assets/p51.png',
+  topicSlug: 'healthy-food',
+  subtopic: 'Экспертные колонки',
+  image: '/assets/26-1.png',
   excerpt:
     'Использование датчика непрерывного мониторинга глюкозы помогает вывести заботу о здоровье на качественно новый уровень и позволяет не только выглядеть роскошно, но и чувствовать себя энергичными и здоровыми изнутри.',
   publishedAt: '18 марта 2026',
@@ -28,16 +28,14 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/p51.png',
+          src: '/assets/26-2.png',
           alt: 'Тарелка с авокадо, помидорами и курицей',
-          caption: 'ФОТО 1 — тарелка с авокадо, помидорами и курицей, центральная часть страницы.',
         },
         {
           type: 'image',
-          src: '/assets/portrait-2.jpg',
+          src: '/assets/26-1.png',
           alt: 'Портрет Екатерины Абзаутдиновой в розовом пиджаке',
           variant: 'aside',
-          caption: 'ФОТО 2 — портрет Екатерины Абзаутдиновой в розовом пиджаке, нижняя левая часть страницы.',
         },
         {
           type: 'paragraph',
@@ -62,9 +60,8 @@ export const article = createArticle({
       content: [
         {
           type: 'image',
-          src: '/assets/p46.png',
+          src: '/assets/27.png',
           alt: 'Крупный коллаж: портрет Екатерины и продукты на розовом фоне',
-          caption: 'ФОТО 3 — крупный коллаж: портрет Екатерины и продукты на розовом фоне, верхняя часть страницы.',
         },
         {
           type: 'paragraph',
@@ -113,15 +110,15 @@ export const article = createArticle({
           type: 'paragraph',
           text: 'Мы начинаем видеть объективные данные и учиться понимать истинные сигналы своего организма, чтобы не быть заложниками противоречивых советов из интернета и заботиться о себе качественно.',
         },
-        {
-          type: 'image',
-          src: '/assets/p38.png',
-          alt: 'QR-код',
-          variant: 'aside',
-          caption: 'QR 1 — QR-код в правом нижнем углу страницы. Справа внизу вертикально стоит слово «РЕКЛАМА».',
-        },
       ],
     },
   ],
   relatedSlugs: ['restoration-evening-ritual', 'checkup-track-markers'],
+  helpfulLinks: {
+    links: [
+      {
+        title: 'Канал Екатерины',
+        href: 'https://t.me/selfcarebykatyabehealthy',
+      },]
+  }
 });
