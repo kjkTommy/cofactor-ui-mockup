@@ -11,9 +11,8 @@ export default function ContactsPage() {
             Вы можете связаться с редакцией по вопросам сотрудничества, публикаций, предложений и обратной связи.
           </p>
           <div className="contact-list">
-            <div><span>Email</span><a href="mailto:ko_faktor@mail.ru">vk2218484@gmail.com</a></div>
+            <div><span>Email</span><a href="mailto:ko_faktor@mail.ru">ko_faktor@mail.ru</a></div>
             <div><span>Telegram</span><a href='https://t.me/ng_health' target="_blank">@ng_health</a></div>
-            <div><span>Vkontakte</span><a href='https://t.me/ng_health' target="_blank">@ng_health</a></div>
             <div><span>Город</span><p>Пермь</p></div>
           </div>
         </div>
