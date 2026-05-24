@@ -120,7 +120,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <div>
             <p className="footer__title">Контакты</p>
 
-            <a className="muted mail" href="mailto:hello@cofactor-journal.ru">hello@cofactor-journal.ru</a>
+            <a className="muted mail" href="mailto:ko_faktor@mail.ru">ko_faktor@mail.ru</a>
             <p className="muted tg">Telegram: </p>
             <a className="muted-link" href='https://t.me/ng_health' target="_blank">@ng_health</a>
             <Link className="footer__about-link" href="/about">О журнале</Link>

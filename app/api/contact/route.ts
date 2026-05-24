@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-const CONTACT_TO_EMAIL = 'vk2218484@gmail.com';
+const CONTACT_TO_EMAIL = 'ko_faktor@mail.ru';
 const SMTP_HOST = 'smtp.gmail.com';
 const SMTP_PORT = 465;
 
