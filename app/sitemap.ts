@@ -2,6 +2,8 @@ import type { MetadataRoute } from 'next';
 import { articles } from '@/lib/content/articles';
 import { getSiteUrl } from '@/lib/site-config';
 
+export const dynamic = 'force-static';
+
 const staticRoutes = [
   '/',
   '/about',

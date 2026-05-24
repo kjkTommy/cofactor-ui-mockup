@@ -99,10 +99,6 @@ export const article = createArticle({
           variant: 'aside',
         },
         {
-          type: 'paragraph',
-          text: 'Слева вертикально стоит пометка: «БАД — НЕ ЯВЛЯЕТСЯ ЛЕКАРСТВЕННЫМ СРЕДСТВОМ».',
-        },
-        {
           type: 'list',
           title: 'На что смотреть внимательно:',
           items: [

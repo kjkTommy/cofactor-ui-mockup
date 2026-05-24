@@ -21,7 +21,7 @@ export function ContactForm() {
     const form = event.currentTarget;
     const formData = new FormData(form);
 
-    const response = await fetch('/api/contact', {
+    const response = await fetch('/contact.php', {
       method: 'POST',
       body: formData,
     });

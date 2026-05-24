@@ -110,7 +110,7 @@ export const article = createArticle({
         },
         {
           type: 'paragraph',
-          text: 'Офис компании в Перми: Комсомольский проспект, 82.',
+          text: 'Офис компании в Перми: [Комсомольский проспект, 82.](https://yandex.ru/maps/50/perm/house/komsomolskiy_prospekt_82/YU8YdAJjQEwDQFttfXV4c31kZA==/?ll=56.253995%2C57.992170&z=17.12)',
         },
       ],
     },

@@ -124,7 +124,7 @@ export const article = createArticle({
         },
         {
           type: 'paragraph',
-          text: 'Адрес Пермской краевой медицинской библиотеки и музея: Пермь, Шоссе Космонавтов, 16.',
+          text: 'Адрес Пермской краевой медицинской библиотеки и музея: [Пермь, Шоссе Космонавтов, 16.](https://yandex.ru/maps/org/permskaya_krayevaya_meditsinskaya_biblioteka/1040494143/?ll=56.227245%2C58.000628&z=18.18)',
         },
       ],
     },

@@ -37,23 +37,6 @@ export default function AboutPage() {
           </p>
         </article>
       </section>
-
-      <section className="team-grid">
-        <article className="team-card card">
-          <img src="/assets/portrait-1.jpg" alt="Автор журнала" />
-          <div>
-            <h3>Экспертный голос</h3>
-            <p>Портретные карточки сделаны спокойными, без тяжелых интерфейсных обводок.</p>
-          </div>
-        </article>
-        <article className="team-card card">
-          <img src="/assets/portrait-2.jpg" alt="Редактор" />
-          <div>
-            <h3>Редакционный стиль</h3>
-            <p>Используются мягкие блоки текста, тонкие рамки и ровные поля.</p>
-          </div>
-        </article>
-      </section>
     </main>
   );
 }

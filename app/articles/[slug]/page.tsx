@@ -145,6 +145,14 @@ function renderBlock(block: ArticleContentBlock, key: string, fallbackTitle: str
   );
 }
 
+function isDisplayIntro(paragraphs: string[]) {
+  return paragraphs.length > 1 && paragraphs.every((paragraph) => {
+    const letters = paragraph.replace(/[^A-ZА-ЯЁ]/g, '');
+
+    return letters.length > 0 && paragraph === paragraph.toUpperCase() && paragraph.length <= 48;
+  });
+}
+
 export default async function ArticlePage({ params }: ArticlePageProps) {
   const { slug } = await params;
   const article = getArticleBySlug(slug);
@@ -155,6 +163,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
   const topic = topicDefinitions.find((item) => item.slug === article.topicSlug);
   const relatedArticles = getRelatedArticles(article.relatedSlugs);
+  const hasDisplayIntro = isDisplayIntro(article.intro);
 
   return (
     <main className="shell section-gap page-stack article-page">
@@ -218,7 +227,16 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
         <article className="article-body article-body--editorial card card--paper">
           {article.intro.map((paragraph, index) => (
-            <p key={paragraph} className={index === 0 ? 'dropcap' : undefined}>
+            <p
+              key={paragraph}
+              className={
+                hasDisplayIntro
+                  ? `article-intro-display article-intro-display--${index === 0 ? 'title' : 'subtitle'}`
+                  : index === 0
+                    ? 'dropcap'
+                    : undefined
+              }
+            >
               {paragraph}
             </p>
           ))}
