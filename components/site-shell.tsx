@@ -112,7 +112,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <div>
             <p className="footer__title">Навигация</p>
             <div className="footer__links">
-              {links.map((link) => (
+              {links.filter(link => link.label !== 'Контакты').map((link) => (
                 <Link key={link.href} href={link.href}>{link.label}</Link>
               ))}
             </div>
@@ -124,6 +124,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <p className="muted tg">Telegram: </p>
             <a className="muted-link" href='https://t.me/ng_health' target="_blank">@ng_health</a>
             <Link className="footer__about-link" href="/about">О журнале</Link>
+            <Link className="footer__about-link" href="/privacy">Политика конфиденциальности</Link>
           </div>
         </div>
       </footer>

@@ -26,10 +26,37 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'kofaktor',
+  alternateName: ['КоФактор', 'Гладких Наталья Михайловна'],
+  url: SITE_URL.toString(),
+  email: 'ko_faktor@mail.ru',
+  telephone: '+79026472190',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Виноградная улица, 14, жилой район Ново-Бродовский',
+    addressLocality: 'Пермь',
+    addressCountry: 'RU',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'editorial office',
+    telephone: '+79026472190',
+    email: 'ko_faktor@mail.ru',
+    availableLanguage: 'ru',
+  },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ru">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <SiteShell>{children}</SiteShell>
       </body>
     </html>

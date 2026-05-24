@@ -1549,6 +1549,23 @@ select {
   margin-top: 16px;
 }
 
+.about-lead section {
+  margin-top: 24px;
+}
+
+.about-lead section h2 {
+  margin: 0 0 10px;
+  font: 500 1.45rem/1.2 var(--font-display);
+  color: var(--text);
+}
+
+.privacy-title {
+  max-width: 100%;
+  font-size: clamp(2.4rem, 9vw, 4.2rem);
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
 .about-lead p.about-info {
   font-size: 14px;
   line-height: 22px;
